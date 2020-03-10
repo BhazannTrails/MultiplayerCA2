@@ -1,5 +1,5 @@
-#ifndef BOOK_RESOURCEIDENTIFIERS_HPP
-#define BOOK_RESOURCEIDENTIFIERS_HPP
+#ifndef Include_RESOURCEIDENTIFIERS_HPP
+#define Include_RESOURCEIDENTIFIERS_HPP
 
 
 // Forward declaration of SFML classes
@@ -77,4 +77,4 @@ typedef ResourceHolder<sf::Font, Fonts::ID>					FontHolder;
 typedef ResourceHolder<sf::Shader, Shaders::ID>				ShaderHolder;
 typedef ResourceHolder<sf::SoundBuffer, SoundEffect::ID>	SoundBufferHolder;
 
-#endif // BOOK_RESOURCEIDENTIFIERS_HPP
+#endif // Include_RESOURCEIDENTIFIERS_HPP

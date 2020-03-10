@@ -1,7 +1,7 @@
-#ifndef BOOK_COMMAND_HPP
-#define BOOK_COMMAND_HPP
+#ifndef Include_COMMAND_HPP
+#define Include_COMMAND_HPP
 
-#include <Book/Category.hpp>
+#include <Include/Category.hpp>
 
 #include <SFML/System/Time.hpp>
 
@@ -34,4 +34,4 @@ Command::Action derivedAction(Function fn)
 	};
 }
 
-#endif // BOOK_COMMAND_HPP
+#endif // Include_COMMAND_HPP

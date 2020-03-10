@@ -1,9 +1,9 @@
-#ifndef BOOK_GAMESTATE_HPP
-#define BOOK_GAMESTATE_HPP
+#ifndef Include_GAMESTATE_HPP
+#define Include_GAMESTATE_HPP
 
-#include <Book/State.hpp>
-#include <Book/World.hpp>
-#include <Book/Player.hpp>
+#include <Include/State.hpp>
+#include <Include/World.hpp>
+#include <Include/Player.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -24,4 +24,4 @@ class GameState : public State
 		Player				mPlayer;
 };
 
-#endif // BOOK_GAMESTATE_HPP
+#endif // Include_GAMESTATE_HPP

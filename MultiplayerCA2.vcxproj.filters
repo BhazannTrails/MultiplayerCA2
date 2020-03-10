@@ -251,288 +251,288 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\book\._ResourceHolder.inl">
+    <None Include="include\Include\._ResourceHolder.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="include\book\._Utility.inl">
+    <None Include="include\Include\._Utility.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="include\book\ResourceHolder.inl">
+    <None Include="include\Include\ResourceHolder.inl">
       <Filter>Header Files</Filter>
     </None>
-    <None Include="include\book\Utility.inl">
+    <None Include="include\Include\Utility.inl">
       <Filter>Header Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\book\._Aircraft.hpp">
+    <ClInclude Include="include\Include\._Aircraft.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Animation.hpp">
+    <ClInclude Include="include\Include\._Animation.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Application.hpp">
+    <ClInclude Include="include\Include\._Application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._BloomEffect.hpp">
+    <ClInclude Include="include\Include\._BloomEffect.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Button.hpp">
+    <ClInclude Include="include\Include\._Button.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Category.hpp">
+    <ClInclude Include="include\Include\._Category.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Command.hpp">
+    <ClInclude Include="include\Include\._Command.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._CommandQueue.hpp">
+    <ClInclude Include="include\Include\._CommandQueue.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Component.hpp">
+    <ClInclude Include="include\Include\._Component.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Container.hpp">
+    <ClInclude Include="include\Include\._Container.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._DataTables.hpp">
+    <ClInclude Include="include\Include\._DataTables.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._EmitterNode.hpp">
+    <ClInclude Include="include\Include\._EmitterNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Entity.hpp">
+    <ClInclude Include="include\Include\._Entity.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Foreach.hpp">
+    <ClInclude Include="include\Include\._Foreach.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._GameOverState.hpp">
+    <ClInclude Include="include\Include\._GameOverState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._GameServer.hpp">
+    <ClInclude Include="include\Include\._GameServer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._GameState.hpp">
+    <ClInclude Include="include\Include\._GameState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._KeyBinding.hpp">
+    <ClInclude Include="include\Include\._KeyBinding.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Label.hpp">
+    <ClInclude Include="include\Include\._Label.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._MenuState.hpp">
+    <ClInclude Include="include\Include\._MenuState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._MultiplayerGameState.hpp">
+    <ClInclude Include="include\Include\._MultiplayerGameState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._MusicPlayer.hpp">
+    <ClInclude Include="include\Include\._MusicPlayer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._NetworkNode.hpp">
+    <ClInclude Include="include\Include\._NetworkNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._NetworkProtocol.hpp">
+    <ClInclude Include="include\Include\._NetworkProtocol.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Particle.hpp">
+    <ClInclude Include="include\Include\._Particle.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._ParticleNode.hpp">
+    <ClInclude Include="include\Include\._ParticleNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._PauseState.hpp">
+    <ClInclude Include="include\Include\._PauseState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Pickup.hpp">
+    <ClInclude Include="include\Include\._Pickup.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Player.hpp">
+    <ClInclude Include="include\Include\._Player.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._PostEffect.hpp">
+    <ClInclude Include="include\Include\._PostEffect.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Projectile.hpp">
+    <ClInclude Include="include\Include\._Projectile.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._ResourceHolder.hpp">
+    <ClInclude Include="include\Include\._ResourceHolder.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._ResourceIdentifiers.hpp">
+    <ClInclude Include="include\Include\._ResourceIdentifiers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._SceneNode.hpp">
+    <ClInclude Include="include\Include\._SceneNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._SettingsState.hpp">
+    <ClInclude Include="include\Include\._SettingsState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._SoundNode.hpp">
+    <ClInclude Include="include\Include\._SoundNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._SoundPlayer.hpp">
+    <ClInclude Include="include\Include\._SoundPlayer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._SpriteNode.hpp">
+    <ClInclude Include="include\Include\._SpriteNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._State.hpp">
+    <ClInclude Include="include\Include\._State.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._StateIdentifiers.hpp">
+    <ClInclude Include="include\Include\._StateIdentifiers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._StateStack.hpp">
+    <ClInclude Include="include\Include\._StateStack.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._TextNode.hpp">
+    <ClInclude Include="include\Include\._TextNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._TitleState.hpp">
+    <ClInclude Include="include\Include\._TitleState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._Utility.hpp">
+    <ClInclude Include="include\Include\._Utility.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\._World.hpp">
+    <ClInclude Include="include\Include\._World.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Aircraft.hpp">
+    <ClInclude Include="include\Include\Aircraft.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Animation.hpp">
+    <ClInclude Include="include\Include\Animation.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Application.hpp">
+    <ClInclude Include="include\Include\Application.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\BloomEffect.hpp">
+    <ClInclude Include="include\Include\BloomEffect.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Button.hpp">
+    <ClInclude Include="include\Include\Button.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Category.hpp">
+    <ClInclude Include="include\Include\Category.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Command.hpp">
+    <ClInclude Include="include\Include\Command.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\CommandQueue.hpp">
+    <ClInclude Include="include\Include\CommandQueue.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Component.hpp">
+    <ClInclude Include="include\Include\Component.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Container.hpp">
+    <ClInclude Include="include\Include\Container.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\DataTables.hpp">
+    <ClInclude Include="include\Include\DataTables.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\EmitterNode.hpp">
+    <ClInclude Include="include\Include\EmitterNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Entity.hpp">
+    <ClInclude Include="include\Include\Entity.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Foreach.hpp">
+    <ClInclude Include="include\Include\Foreach.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\GameOverState.hpp">
+    <ClInclude Include="include\Include\GameOverState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\GameServer.hpp">
+    <ClInclude Include="include\Include\GameServer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\GameState.hpp">
+    <ClInclude Include="include\Include\GameState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\KeyBinding.hpp">
+    <ClInclude Include="include\Include\KeyBinding.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Label.hpp">
+    <ClInclude Include="include\Include\Label.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\MenuState.hpp">
+    <ClInclude Include="include\Include\MenuState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\MultiplayerGameState.hpp">
+    <ClInclude Include="include\Include\MultiplayerGameState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\MusicPlayer.hpp">
+    <ClInclude Include="include\Include\MusicPlayer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\NetworkNode.hpp">
+    <ClInclude Include="include\Include\NetworkNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\NetworkProtocol.hpp">
+    <ClInclude Include="include\Include\NetworkProtocol.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Particle.hpp">
+    <ClInclude Include="include\Include\Particle.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\ParticleNode.hpp">
+    <ClInclude Include="include\Include\ParticleNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\PauseState.hpp">
+    <ClInclude Include="include\Include\PauseState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Pickup.hpp">
+    <ClInclude Include="include\Include\Pickup.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Player.hpp">
+    <ClInclude Include="include\Include\Player.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\PostEffect.hpp">
+    <ClInclude Include="include\Include\PostEffect.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Projectile.hpp">
+    <ClInclude Include="include\Include\Projectile.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\ResourceHolder.hpp">
+    <ClInclude Include="include\Include\ResourceHolder.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\ResourceIdentifiers.hpp">
+    <ClInclude Include="include\Include\ResourceIdentifiers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\SceneNode.hpp">
+    <ClInclude Include="include\Include\SceneNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\SettingsState.hpp">
+    <ClInclude Include="include\Include\SettingsState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\SoundNode.hpp">
+    <ClInclude Include="include\Include\SoundNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\SoundPlayer.hpp">
+    <ClInclude Include="include\Include\SoundPlayer.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\SpriteNode.hpp">
+    <ClInclude Include="include\Include\SpriteNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\State.hpp">
+    <ClInclude Include="include\Include\State.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\StateIdentifiers.hpp">
+    <ClInclude Include="include\Include\StateIdentifiers.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\StateStack.hpp">
+    <ClInclude Include="include\Include\StateStack.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\TextNode.hpp">
+    <ClInclude Include="include\Include\TextNode.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\TitleState.hpp">
+    <ClInclude Include="include\Include\TitleState.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\Utility.hpp">
+    <ClInclude Include="include\Include\Utility.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\book\World.hpp">
+    <ClInclude Include="include\Include\World.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

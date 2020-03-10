@@ -1,8 +1,8 @@
-#ifndef BOOK_EMITTERNODE_HPP
-#define BOOK_EMITTERNODE_HPP
+#ifndef Include_EMITTERNODE_HPP
+#define Include_EMITTERNODE_HPP
 
-#include <Book/SceneNode.hpp>
-#include <Book/Particle.hpp>
+#include <Include/SceneNode.hpp>
+#include <Include/Particle.hpp>
 
 
 class ParticleNode;
@@ -25,4 +25,4 @@ class EmitterNode : public SceneNode
 		ParticleNode*			mParticleSystem;
 };
 
-#endif // BOOK_EMITTERNODE_HPP
+#endif // Include_EMITTERNODE_HPP

@@ -1,7 +1,7 @@
-#ifndef BOOK_TITLESTATE_HPP
-#define BOOK_TITLESTATE_HPP
+#ifndef Include_TITLESTATE_HPP
+#define Include_TITLESTATE_HPP
 
-#include <Book/State.hpp>
+#include <Include/State.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -25,4 +25,4 @@ class TitleState : public State
 		sf::Time			mTextEffectTime;
 };
 
-#endif // BOOK_TITLESTATE_HPP
+#endif // Include_TITLESTATE_HPP

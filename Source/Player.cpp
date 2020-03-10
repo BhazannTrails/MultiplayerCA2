@@ -1,8 +1,8 @@
-#include <Book/Player.hpp>
-#include <Book/CommandQueue.hpp>
-#include <Book/Aircraft.hpp>
-#include <Book/Foreach.hpp>
-#include <Book/NetworkProtocol.hpp>
+#include <Include/Player.hpp>
+#include <Include/CommandQueue.hpp>
+#include <Include/Aircraft.hpp>
+#include <Include/Foreach.hpp>
+#include <Include/NetworkProtocol.hpp>
 
 #include <SFML/Network/Packet.hpp>
 

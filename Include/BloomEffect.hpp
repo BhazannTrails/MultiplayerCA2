@@ -1,9 +1,9 @@
-#ifndef BOOK_BLOOMEFFECT_HPP
-#define BOOK_BLOOMEFFECT_HPP
+#ifndef Include_BLOOMEFFECT_HPP
+#define Include_BLOOMEFFECT_HPP
 
-#include <Book/PostEffect.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/ResourceHolder.hpp>
+#include <Include/PostEffect.hpp>
+#include <Include/ResourceIdentifiers.hpp>
+#include <Include/ResourceHolder.hpp>
 
 #include <SFML/Graphics/RenderTexture.hpp>
 #include <SFML/Graphics/Shader.hpp>
@@ -41,4 +41,4 @@ class BloomEffect : public PostEffect
 		RenderTextureArray	mSecondPassTextures;
 };
 
-#endif // BOOK_BLOOMEFFECT_HPP
+#endif // Include_BLOOMEFFECT_HPP

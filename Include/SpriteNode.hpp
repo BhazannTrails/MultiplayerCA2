@@ -1,7 +1,7 @@
-#ifndef BOOK_SPRITENODE_HPP
-#define BOOK_SPRITENODE_HPP
+#ifndef Include_SPRITENODE_HPP
+#define Include_SPRITENODE_HPP
 
-#include <Book/SceneNode.hpp>
+#include <Include/SceneNode.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 
@@ -21,4 +21,4 @@ class SpriteNode : public SceneNode
 		sf::Sprite			mSprite;
 };
 
-#endif // BOOK_SPRITENODE_HPP
+#endif // Include_SPRITENODE_HPP

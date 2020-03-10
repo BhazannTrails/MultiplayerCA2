@@ -1,11 +1,11 @@
 
-#ifndef BOOK_BUTTON_HPP
-#define BOOK_BUTTON_HPP
+#ifndef Include_BUTTON_HPP
+#define Include_BUTTON_HPP
 
-#include <Book/Component.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/State.hpp>
-#include <Book/ResourceHolder.hpp>
+#include <Include/Component.hpp>
+#include <Include/ResourceIdentifiers.hpp>
+#include <Include/State.hpp>
+#include <Include/ResourceHolder.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -68,4 +68,4 @@ class Button : public Component
 
 }
 
-#endif // BOOK_BUTTON_HPP
+#endif // Include_BUTTON_HPP

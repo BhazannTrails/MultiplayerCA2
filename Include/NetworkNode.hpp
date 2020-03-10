@@ -1,8 +1,8 @@
-#ifndef BOOK_NETWORKNODE_HPP
-#define BOOK_NETWORKNODE_HPP
+#ifndef Include_NETWORKNODE_HPP
+#define Include_NETWORKNODE_HPP
 
-#include <Book/SceneNode.hpp>
-#include <Book/NetworkProtocol.hpp>
+#include <Include/SceneNode.hpp>
+#include <Include/NetworkProtocol.hpp>
 
 #include <queue>
 
@@ -22,4 +22,4 @@ class NetworkNode : public SceneNode
 		std::queue<GameActions::Action>	mPendingActions;
 };
 
-#endif // BOOK_NETWORKNODE_HPP
+#endif // Include_NETWORKNODE_HPP

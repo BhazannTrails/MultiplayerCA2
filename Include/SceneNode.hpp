@@ -1,7 +1,7 @@
-#ifndef BOOK_SCENENODE_HPP
-#define BOOK_SCENENODE_HPP
+#ifndef Include_SCENENODE_HPP
+#define Include_SCENENODE_HPP
 
-#include <Book/Category.hpp>
+#include <Include/Category.hpp>
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/System/Time.hpp>
@@ -65,4 +65,4 @@ class SceneNode : public sf::Transformable, public sf::Drawable, private sf::Non
 bool	collision(const SceneNode& lhs, const SceneNode& rhs);
 float	distance(const SceneNode& lhs, const SceneNode& rhs);
 
-#endif // BOOK_SCENENODE_HPP
+#endif // Include_SCENENODE_HPP

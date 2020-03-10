@@ -1,12 +1,12 @@
-#ifndef BOOK_AIRCRAFT_HPP
-#define BOOK_AIRCRAFT_HPP
+#ifndef Include_AIRCRAFT_HPP
+#define Include_AIRCRAFT_HPP
 
-#include <Book/Entity.hpp>
-#include <Book/Command.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/Projectile.hpp>
-#include <Book/TextNode.hpp>
-#include <Book/Animation.hpp>
+#include <Include/Entity.hpp>
+#include <Include/Command.hpp>
+#include <Include/ResourceIdentifiers.hpp>
+#include <Include/Projectile.hpp>
+#include <Include/TextNode.hpp>
+#include <Include/Animation.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 
@@ -88,4 +88,4 @@ class Aircraft : public Entity
 	
 		int						mIdentifier;};
 
-#endif // BOOK_AIRCRAFT_HPP
+#endif // Include_AIRCRAFT_HPP

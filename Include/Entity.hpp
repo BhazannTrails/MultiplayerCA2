@@ -1,7 +1,7 @@
-#ifndef BOOK_ENTITY_HPP
-#define BOOK_ENTITY_HPP
+#ifndef Include_ENTITY_HPP
+#define Include_ENTITY_HPP
 
-#include <Book/SceneNode.hpp>
+#include <Include/SceneNode.hpp>
 
 
 class Entity : public SceneNode
@@ -33,4 +33,4 @@ class Entity : public SceneNode
 		int					mHitpoints;
 };
 
-#endif // BOOK_ENTITY_HPP
+#endif // Include_ENTITY_HPP

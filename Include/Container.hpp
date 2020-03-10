@@ -1,7 +1,7 @@
-#ifndef BOOK_CONTAINER_HPP
-#define BOOK_CONTAINER_HPP
+#ifndef Include_CONTAINER_HPP
+#define Include_CONTAINER_HPP
 
-#include <Book/Component.hpp>
+#include <Include/Component.hpp>
 
 #include <vector>
 #include <memory>
@@ -41,4 +41,4 @@ class Container : public Component
 
 }
 
-#endif // BOOK_CONTAINER_HPP
+#endif // Include_CONTAINER_HPP

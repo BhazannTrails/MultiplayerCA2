@@ -1,7 +1,7 @@
-#ifndef BOOK_COMMANDQUEUE_HPP
-#define BOOK_COMMANDQUEUE_HPP
+#ifndef Include_COMMANDQUEUE_HPP
+#define Include_COMMANDQUEUE_HPP
 
-#include <Book/Command.hpp>
+#include <Include/Command.hpp>
 
 #include <queue>
 
@@ -18,4 +18,4 @@ class CommandQueue
 		std::queue<Command>			mQueue;
 };
 
-#endif // BOOK_COMMANDQUEUE_HPP
+#endif // Include_COMMANDQUEUE_HPP

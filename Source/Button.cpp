@@ -1,7 +1,7 @@
-#include <Book/Button.hpp>
-#include <Book/Utility.hpp>
-#include <Book/SoundPlayer.hpp>
-#include <Book/ResourceHolder.hpp>
+#include <Include/Button.hpp>
+#include <Include/Utility.hpp>
+#include <Include/SoundPlayer.hpp>
+#include <Include/ResourceHolder.hpp>
 
 #include <SFML/Window/Event.hpp>
 #include <SFML/Graphics/RenderStates.hpp>

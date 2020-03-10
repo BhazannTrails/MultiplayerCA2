@@ -1,9 +1,9 @@
-#ifndef BOOK_TEXTNODE_HPP
-#define BOOK_TEXTNODE_HPP
+#ifndef Include_TEXTNODE_HPP
+#define Include_TEXTNODE_HPP
 
-#include <Book/ResourceHolder.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/SceneNode.hpp>
+#include <Include/ResourceHolder.hpp>
+#include <Include/ResourceIdentifiers.hpp>
+#include <Include/SceneNode.hpp>
 
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/Font.hpp>
@@ -25,4 +25,4 @@ class TextNode : public SceneNode
 		sf::Text			mText;
 };
 
-#endif // BOOK_TEXTNODE_HPP
+#endif // Include_TEXTNODE_HPP

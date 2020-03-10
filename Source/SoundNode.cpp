@@ -1,5 +1,5 @@
-#include <Book/SoundNode.hpp>
-#include <Book/SoundPlayer.hpp>
+#include <Include/SoundNode.hpp>
+#include <Include/SoundPlayer.hpp>
 
 
 SoundNode::SoundNode(SoundPlayer& player)

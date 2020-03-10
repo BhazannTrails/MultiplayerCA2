@@ -1,14 +1,14 @@
-#include <Book/Application.hpp>
-#include <Book/Utility.hpp>
-#include <Book/State.hpp>
-#include <Book/StateIdentifiers.hpp>
-#include <Book/TitleState.hpp>
-#include <Book/GameState.hpp>
-#include <Book/MultiplayerGameState.hpp>
-#include <Book/MenuState.hpp>
-#include <Book/PauseState.hpp>
-#include <Book/SettingsState.hpp>
-#include <Book/GameOverState.hpp>
+#include <Include/Application.hpp>
+#include <Include/Utility.hpp>
+#include <Include/State.hpp>
+#include <Include/StateIdentifiers.hpp>
+#include <Include/TitleState.hpp>
+#include <Include/GameState.hpp>
+#include <Include/MultiplayerGameState.hpp>
+#include <Include/MenuState.hpp>
+#include <Include/PauseState.hpp>
+#include <Include/SettingsState.hpp>
+#include <Include/GameOverState.hpp>
 
 
 const sf::Time Application::TimePerFrame = sf::seconds(1.f/60.f);

@@ -1,5 +1,5 @@
-#ifndef BOOK_COMPONENT_HPP
-#define BOOK_COMPONENT_HPP
+#ifndef Include_COMPONENT_HPP
+#define Include_COMPONENT_HPP
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/Drawable.hpp>
@@ -45,4 +45,4 @@ class Component : public sf::Drawable, public sf::Transformable, private sf::Non
 
 }
 
-#endif // BOOK_COMPONENT_HPP
+#endif // Include_COMPONENT_HPP

@@ -1,7 +1,7 @@
-#ifndef BOOK_DATATABLES_HPP
-#define BOOK_DATATABLES_HPP
+#ifndef Include_DATATABLES_HPP
+#define Include_DATATABLES_HPP
 
-#include <Book/ResourceIdentifiers.hpp>
+#include <Include/ResourceIdentifiers.hpp>
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/Color.hpp>
@@ -63,4 +63,4 @@ std::vector<ProjectileData>	initializeProjectileData();
 std::vector<PickupData>		initializePickupData();
 std::vector<ParticleData>	initializeParticleData();
 
-#endif // BOOK_DATATABLES_HPP
+#endif // Include_DATATABLES_HPP

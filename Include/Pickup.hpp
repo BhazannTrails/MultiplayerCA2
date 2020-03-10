@@ -1,9 +1,9 @@
-#ifndef BOOK_PICKUP_HPP
-#define BOOK_PICKUP_HPP
+#ifndef Include_PICKUP_HPP
+#define Include_PICKUP_HPP
 
-#include <Book/Entity.hpp>
-#include <Book/Command.hpp>
-#include <Book/ResourceIdentifiers.hpp>
+#include <Include/Entity.hpp>
+#include <Include/Command.hpp>
+#include <Include/ResourceIdentifiers.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 
@@ -41,4 +41,4 @@ class Pickup : public Entity
 		sf::Sprite				mSprite;
 };
 
-#endif // BOOK_PICKUP_HPP
+#endif // Include_PICKUP_HPP

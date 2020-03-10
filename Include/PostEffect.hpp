@@ -1,5 +1,5 @@
-#ifndef BOOK_POSTEFFECT_HPP
-#define BOOK_POSTEFFECT_HPP
+#ifndef Include_POSTEFFECT_HPP
+#define Include_POSTEFFECT_HPP
 
 #include <SFML/System/NonCopyable.hpp>
 
@@ -24,4 +24,4 @@ class PostEffect : sf::NonCopyable
 		static void				applyShader(const sf::Shader& shader, sf::RenderTarget& output);
 };
 
-#endif // BOOK_POSTEFFECT_HPP
+#endif // Include_POSTEFFECT_HPP

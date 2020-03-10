@@ -1,5 +1,5 @@
-#ifndef BOOK_RESOURCEHOLDER_HPP
-#define BOOK_RESOURCEHOLDER_HPP
+#ifndef Include_RESOURCEHOLDER_HPP
+#define Include_RESOURCEHOLDER_HPP
 
 #include <map>
 #include <string>
@@ -30,4 +30,4 @@ class ResourceHolder
 };
 
 #include "ResourceHolder.inl"
-#endif // BOOK_RESOURCEHOLDER_HPP
+#endif // Include_RESOURCEHOLDER_HPP

@@ -1,5 +1,5 @@
-#ifndef BOOK_GAMESERVER_HPP
-#define BOOK_GAMESERVER_HPP
+#ifndef Include_GAMESERVER_HPP
+#define Include_GAMESERVER_HPP
 
 #include <SFML/System/Vector2.hpp>
 #include <SFML/System/Thread.hpp>
@@ -94,4 +94,4 @@ class GameServer
 		sf::Time							mTimeForNextSpawn;
 };
 
-#endif // BOOK_GAMESERVER_HPP
+#endif // Include_GAMESERVER_HPP

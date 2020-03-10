@@ -1,6 +1,6 @@
-#include <Book/SettingsState.hpp>
-#include <Book/Utility.hpp>
-#include <Book/ResourceHolder.hpp>
+#include <Include/SettingsState.hpp>
+#include <Include/Utility.hpp>
+#include <Include/ResourceHolder.hpp>
 
 #include <SFML/Graphics/RenderWindow.hpp>
 

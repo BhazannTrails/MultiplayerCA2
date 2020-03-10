@@ -1,7 +1,7 @@
-#include <Book/MultiplayerGameState.hpp>
-#include <Book/MusicPlayer.hpp>
-#include <Book/Foreach.hpp>
-#include <Book/Utility.hpp>
+#include <Include/MultiplayerGameState.hpp>
+#include <Include/MusicPlayer.hpp>
+#include <Include/Foreach.hpp>
+#include <Include/Utility.hpp>
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Network/IpAddress.hpp>

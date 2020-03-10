@@ -1,8 +1,8 @@
-#ifndef BOOK_MENUSTATE_HPP
-#define BOOK_MENUSTATE_HPP
+#ifndef Include_MENUSTATE_HPP
+#define Include_MENUSTATE_HPP
 
-#include <Book/State.hpp>
-#include <Book/Container.hpp>
+#include <Include/State.hpp>
+#include <Include/Container.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -23,4 +23,4 @@ class MenuState : public State
 		GUI::Container			mGUIContainer;
 };
 
-#endif // BOOK_MENUSTATE_HPP
+#endif // Include_MENUSTATE_HPP

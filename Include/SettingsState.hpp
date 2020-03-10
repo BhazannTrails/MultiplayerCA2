@@ -1,11 +1,11 @@
-#ifndef BOOK_SETTINGSSTATE_HPP
-#define BOOK_SETTINGSSTATE_HPP
+#ifndef Include_SETTINGSSTATE_HPP
+#define Include_SETTINGSSTATE_HPP
 
-#include <Book/State.hpp>
-#include <Book/KeyBinding.hpp>
-#include <Book/Container.hpp>
-#include <Book/Button.hpp>
-#include <Book/Label.hpp>
+#include <Include/State.hpp>
+#include <Include/KeyBinding.hpp>
+#include <Include/Container.hpp>
+#include <Include/Button.hpp>
+#include <Include/Label.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -35,4 +35,4 @@ class SettingsState : public State
 		std::array<GUI::Label::Ptr, 2*PlayerAction::Count> 	mBindingLabels;
 };
 
-#endif // BOOK_SETTINGSSTATE_HPP
+#endif // Include_SETTINGSSTATE_HPP

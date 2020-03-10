@@ -1,8 +1,8 @@
-#ifndef BOOK_PLAYER_HPP
-#define BOOK_PLAYER_HPP
+#ifndef Include_PLAYER_HPP
+#define Include_PLAYER_HPP
 
-#include <Book/Command.hpp>
-#include <Book/KeyBinding.hpp>
+#include <Include/Command.hpp>
+#include <Include/KeyBinding.hpp>
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Window/Event.hpp>
@@ -57,4 +57,4 @@ class Player : private sf::NonCopyable
 		sf::TcpSocket*				mSocket;
 };
 
-#endif // BOOK_PLAYER_HPP
+#endif // Include_PLAYER_HPP

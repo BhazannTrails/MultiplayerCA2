@@ -1,5 +1,5 @@
-#ifndef BOOK_STATEIDENTIFIERS_HPP
-#define BOOK_STATEIDENTIFIERS_HPP
+#ifndef Include_STATEIDENTIFIERS_HPP
+#define Include_STATEIDENTIFIERS_HPP
 
 
 namespace States
@@ -21,4 +21,4 @@ namespace States
 	};
 }
 
-#endif // BOOK_STATEIDENTIFIERS_HPP
+#endif // Include_STATEIDENTIFIERS_HPP

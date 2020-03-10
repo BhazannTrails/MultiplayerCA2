@@ -1,5 +1,5 @@
-#ifndef BOOK_PARTICLE_HPP
-#define BOOK_PARTICLE_HPP
+#ifndef Include_PARTICLE_HPP
+#define Include_PARTICLE_HPP
 
 #include <SFML/System/Vector2.hpp>
 #include <SFML/System/Time.hpp>
@@ -20,4 +20,4 @@ struct Particle
 	sf::Time		lifetime;
 };
 
-#endif // BOOK_PARTICLE_HPP
+#endif // Include_PARTICLE_HPP

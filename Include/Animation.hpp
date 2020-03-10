@@ -1,5 +1,5 @@
-#ifndef BOOK_ANIMATION_HPP
-#define BOOK_ANIMATION_HPP
+#ifndef Include_ANIMATION_HPP
+#define Include_ANIMATION_HPP
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/System/Time.hpp>
@@ -49,4 +49,4 @@ class Animation : public sf::Drawable, public sf::Transformable
 		bool 					mRepeat;
 };
 
-#endif // BOOK_ANIMATION_HPP
+#endif // Include_ANIMATION_HPP

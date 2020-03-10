@@ -1,5 +1,5 @@
-#ifndef BOOK_NETWORKPROTOCOL_HPP
-#define BOOK_NETWORKPROTOCOL_HPP
+#ifndef Include_NETWORKPROTOCOL_HPP
+#define Include_NETWORKPROTOCOL_HPP
 
 #include <SFML/Config.hpp>
 #include <SFML/System/Vector2.hpp>
@@ -79,4 +79,4 @@ namespace GameActions
 	};
 }
 
-#endif // BOOK_NETWORKPROTOCOL_HPP
+#endif // Include_NETWORKPROTOCOL_HPP

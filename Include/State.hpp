@@ -1,8 +1,8 @@
-#ifndef BOOK_STATE_HPP
-#define BOOK_STATE_HPP
+#ifndef Include_STATE_HPP
+#define Include_STATE_HPP
 
-#include <Book/StateIdentifiers.hpp>
-#include <Book/ResourceIdentifiers.hpp>
+#include <Include/StateIdentifiers.hpp>
+#include <Include/ResourceIdentifiers.hpp>
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Window/Event.hpp>
@@ -65,4 +65,4 @@ class State
 		Context				mContext;
 };
 
-#endif // BOOK_STATE_HPP
+#endif // Include_STATE_HPP

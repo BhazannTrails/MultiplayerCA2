@@ -1,9 +1,9 @@
-#ifndef BOOK_LABEL_HPP
-#define BOOK_LABEL_HPP
+#ifndef Include_LABEL_HPP
+#define Include_LABEL_HPP
 
-#include <Book/Component.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/ResourceHolder.hpp>
+#include <Include/Component.hpp>
+#include <Include/ResourceIdentifiers.hpp>
+#include <Include/ResourceHolder.hpp>
 
 #include <SFML/Graphics/Text.hpp>
 
@@ -36,4 +36,4 @@ class Label : public Component
 
 }
 
-#endif // BOOK_LABEL_HPP
+#endif // Include_LABEL_HPP

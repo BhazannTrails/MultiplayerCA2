@@ -1,9 +1,9 @@
-#ifndef BOOK_PARTICLENODE_HPP
-#define BOOK_PARTICLENODE_HPP
+#ifndef Include_PARTICLENODE_HPP
+#define Include_PARTICLENODE_HPP
 
-#include <Book/SceneNode.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/Particle.hpp>
+#include <Include/SceneNode.hpp>
+#include <Include/ResourceIdentifiers.hpp>
+#include <Include/Particle.hpp>
 
 #include <SFML/Graphics/VertexArray.hpp>
 
@@ -37,4 +37,4 @@ class ParticleNode : public SceneNode
 		mutable bool			mNeedsVertexUpdate;
 };
 
-#endif // BOOK_PARTICLENODE_HPP
+#endif // Include_PARTICLENODE_HPP

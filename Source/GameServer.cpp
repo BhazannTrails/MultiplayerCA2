@@ -1,9 +1,9 @@
-#include <Book/GameServer.hpp>
-#include <Book/NetworkProtocol.hpp>
-#include <Book/Foreach.hpp>
-#include <Book/Utility.hpp>
-#include <Book/Pickup.hpp>
-#include <Book/Aircraft.hpp>
+#include <Include/GameServer.hpp>
+#include <Include/NetworkProtocol.hpp>
+#include <Include/Foreach.hpp>
+#include <Include/Utility.hpp>
+#include <Include/Pickup.hpp>
+#include <Include/Aircraft.hpp>
 
 #include <SFML/Network/Packet.hpp>
 

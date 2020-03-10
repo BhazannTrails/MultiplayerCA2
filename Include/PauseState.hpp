@@ -1,8 +1,8 @@
-#ifndef BOOK_PAUSESTATE_HPP
-#define BOOK_PAUSESTATE_HPP
+#ifndef Include_PAUSESTATE_HPP
+#define Include_PAUSESTATE_HPP
 
-#include <Book/State.hpp>
-#include <Book/Container.hpp>
+#include <Include/State.hpp>
+#include <Include/Container.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -26,4 +26,4 @@ class PauseState : public State
 		bool				mLetUpdatesThrough;
 };
 
-#endif // BOOK_PAUSESTATE_HPP
+#endif // Include_PAUSESTATE_HPP

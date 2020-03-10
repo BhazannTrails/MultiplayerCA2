@@ -1,8 +1,8 @@
-#ifndef BOOK_SOUNDPLAYER_HPP
-#define BOOK_SOUNDPLAYER_HPP
+#ifndef Include_SOUNDPLAYER_HPP
+#define Include_SOUNDPLAYER_HPP
 
-#include <Book/ResourceHolder.hpp>
-#include <Book/ResourceIdentifiers.hpp>
+#include <Include/ResourceHolder.hpp>
+#include <Include/ResourceIdentifiers.hpp>
 
 #include <SFML/System/Vector2.hpp>
 #include <SFML/System/NonCopyable.hpp>
@@ -30,4 +30,4 @@ class SoundPlayer : private sf::NonCopyable
 		std::list<sf::Sound>		mSounds;
 };
 
-#endif // BOOK_SOUNDPLAYER_HPP
+#endif // Include_SOUNDPLAYER_HPP

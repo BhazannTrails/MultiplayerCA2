@@ -1,8 +1,8 @@
-#ifndef BOOK_GAMEOVERSTATE_HPP
-#define BOOK_GAMEOVERSTATE_HPP
+#ifndef Include_GAMEOVERSTATE_HPP
+#define Include_GAMEOVERSTATE_HPP
 
-#include <Book/State.hpp>
-#include <Book/Container.hpp>
+#include <Include/State.hpp>
+#include <Include/Container.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>
@@ -23,4 +23,4 @@ class GameOverState : public State
 		sf::Time			mElapsedTime;
 };
 
-#endif // BOOK_GAMEOVERSTATE_HPP
+#endif // Include_GAMEOVERSTATE_HPP

@@ -1,5 +1,5 @@
-#ifndef BOOK_KEYBINDING_HPP
-#define BOOK_KEYBINDING_HPP
+#ifndef Include_KEYBINDING_HPP
+#define Include_KEYBINDING_HPP
 
 #include <SFML/Window/Keyboard.hpp>
 
@@ -47,4 +47,4 @@ class KeyBinding
 
 bool					isRealtimeAction(PlayerAction::Type action);
 
-#endif // BOOK_KEYBINDING_HPP
+#endif // Include_KEYBINDING_HPP

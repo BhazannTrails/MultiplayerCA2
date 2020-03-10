@@ -1,9 +1,9 @@
-#ifndef BOOK_STATESTACK_HPP
-#define BOOK_STATESTACK_HPP
+#ifndef Include_STATESTACK_HPP
+#define Include_STATESTACK_HPP
 
-#include <Book/State.hpp>
-#include <Book/StateIdentifiers.hpp>
-#include <Book/ResourceIdentifiers.hpp>
+#include <Include/State.hpp>
+#include <Include/StateIdentifiers.hpp>
+#include <Include/ResourceIdentifiers.hpp>
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/System/Time.hpp>
@@ -93,4 +93,4 @@ void StateStack::registerState(States::ID stateID, Param1 arg1)
 	};
 }
 
-#endif // BOOK_STATESTACK_HPP
+#endif // Include_STATESTACK_HPP

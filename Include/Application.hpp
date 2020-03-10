@@ -1,12 +1,12 @@
-#ifndef BOOK_APPLICATION_HPP
-#define BOOK_APPLICATION_HPP
+#ifndef Include_APPLICATION_HPP
+#define Include_APPLICATION_HPP
 
-#include <Book/ResourceHolder.hpp>
-#include <Book/ResourceIdentifiers.hpp>
-#include <Book/KeyBinding.hpp>
-#include <Book/StateStack.hpp>
-#include <Book/MusicPlayer.hpp>
-#include <Book/SoundPlayer.hpp>
+#include <Include/ResourceHolder.hpp>
+#include <Include/ResourceIdentifiers.hpp>
+#include <Include/KeyBinding.hpp>
+#include <Include/StateStack.hpp>
+#include <Include/MusicPlayer.hpp>
+#include <Include/SoundPlayer.hpp>
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -47,4 +47,4 @@ class Application
 		std::size_t				mStatisticsNumFrames;
 };
 
-#endif // BOOK_APPLICATION_HPP
+#endif // Include_APPLICATION_HPP

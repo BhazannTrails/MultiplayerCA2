@@ -1,8 +1,8 @@
-#ifndef BOOK_PROJECTILE_HPP
-#define BOOK_PROJECTILE_HPP
+#ifndef Include_PROJECTILE_HPP
+#define Include_PROJECTILE_HPP
 
-#include <Book/Entity.hpp>
-#include <Book/ResourceIdentifiers.hpp>
+#include <Include/Entity.hpp>
+#include <Include/ResourceIdentifiers.hpp>
 
 #include <SFML/Graphics/Sprite.hpp>
 
@@ -42,4 +42,4 @@ class Projectile : public Entity
 		sf::Vector2f			mTargetDirection;
 };
 
-#endif // BOOK_PROJECTILE_HPP
+#endif // Include_PROJECTILE_HPP

@@ -1,8 +1,8 @@
-#include <Book/Projectile.hpp>
-#include <Book/EmitterNode.hpp>
-#include <Book/DataTables.hpp>
-#include <Book/Utility.hpp>
-#include <Book/ResourceHolder.hpp>
+#include <Include/Projectile.hpp>
+#include <Include/EmitterNode.hpp>
+#include <Include/DataTables.hpp>
+#include <Include/Utility.hpp>
+#include <Include/ResourceHolder.hpp>
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>
