@@ -1,11 +1,11 @@
 #ifndef Include_MULTIPLAYERGAMESTATE_HPP
 #define Include_MULTIPLAYERGAMESTATE_HPP
 
-#include <Include/State.hpp>
-#include <Include/World.hpp>
-#include <Include/Player.hpp>
-#include <Include/GameServer.hpp>
-#include <Include/NetworkProtocol.hpp>
+#include "../Include/State.hpp"
+#include "../Include/World.hpp"
+#include "../Include/Player.hpp"
+#include "../Include/GameServer.hpp"
+#include "../Include/NetworkProtocol.hpp"
 
 #include <SFML/System/Clock.hpp>
 #include <SFML/Graphics/Text.hpp>

@@ -1,12 +1,12 @@
 #ifndef Include_APPLICATION_HPP
 #define Include_APPLICATION_HPP
 
-#include <Include/ResourceHolder.hpp>
-#include <Include/ResourceIdentifiers.hpp>
-#include <Include/KeyBinding.hpp>
-#include <Include/StateStack.hpp>
-#include <Include/MusicPlayer.hpp>
-#include <Include/SoundPlayer.hpp>
+#include "../Include/ResourceHolder.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
+#include "../Include/KeyBinding.hpp"
+#include "../Include/StateStack.hpp"
+#include "../Include/MusicPlayer.hpp"
+#include "../Include/SoundPlayer.hpp"
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>

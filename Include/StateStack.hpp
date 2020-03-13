@@ -1,9 +1,9 @@
 #ifndef Include_STATESTACK_HPP
 #define Include_STATESTACK_HPP
 
-#include <Include/State.hpp>
-#include <Include/StateIdentifiers.hpp>
-#include <Include/ResourceIdentifiers.hpp>
+#include "../Include/State.hpp"
+#include "../Include/StateIdentifiers.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/System/Time.hpp>

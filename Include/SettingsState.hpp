@@ -1,11 +1,11 @@
 #ifndef Include_SETTINGSSTATE_HPP
 #define Include_SETTINGSSTATE_HPP
 
-#include <Include/State.hpp>
-#include <Include/KeyBinding.hpp>
-#include <Include/Container.hpp>
-#include <Include/Button.hpp>
-#include <Include/Label.hpp>
+#include "../Include/State.hpp"
+#include "../Include/KeyBinding.hpp"
+#include "../Include/Container.hpp"
+#include "../Include/Button.hpp"
+#include "../Include/Label.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

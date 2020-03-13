@@ -1,11 +1,11 @@
-#include <Include/Aircraft.hpp>
-#include <Include/DataTables.hpp>
-#include <Include/Utility.hpp>
-#include <Include/Pickup.hpp>
-#include <Include/CommandQueue.hpp>
-#include <Include/SoundNode.hpp>
-#include <Include/NetworkNode.hpp>
-#include <Include/ResourceHolder.hpp>
+#include "../Include/Aircraft.hpp"
+#include "../Include/DataTables.hpp"
+#include "../Include/Utility.hpp"
+#include "../Include/Pickup.hpp"
+#include "../Include/CommandQueue.hpp"
+#include "../Include/SoundNode.hpp"
+#include "../Include/NetworkNode.hpp"
+#include "../Include/ResourceHolder.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Graphics/RenderStates.hpp>

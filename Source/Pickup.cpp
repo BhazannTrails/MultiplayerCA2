@@ -1,9 +1,9 @@
-#include <Include/Pickup.hpp>
-#include <Include/DataTables.hpp>
-#include <Include/Category.hpp>
-#include <Include/CommandQueue.hpp>
-#include <Include/Utility.hpp>
-#include <Include/ResourceHolder.hpp>
+#include "../Include/Pickup.hpp"
+#include "../Include/DataTables.hpp"
+#include "../Include/Category.hpp"
+#include "../Include/CommandQueue.hpp"
+#include "../Include/Utility.hpp"
+#include "../Include/ResourceHolder.hpp"
 
 #include <SFML/Graphics/RenderTarget.hpp>
 

@@ -1,7 +1,7 @@
-#include <Include/EmitterNode.hpp>
-#include <Include/ParticleNode.hpp>
-#include <Include/CommandQueue.hpp>
-#include <Include/Command.hpp>
+#include "../Include/EmitterNode.hpp"
+#include "../Include/ParticleNode.hpp"
+#include "../Include/CommandQueue.hpp"
+#include "../Include/Command.hpp"
 
 
 EmitterNode::EmitterNode(Particle::Type type)

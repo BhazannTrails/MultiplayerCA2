@@ -1,17 +1,17 @@
 #ifndef Include_WORLD_HPP
 #define Include_WORLD_HPP
 
-#include <Include/ResourceHolder.hpp>
-#include <Include/ResourceIdentifiers.hpp>
-#include <Include/SceneNode.hpp>
-#include <Include/SpriteNode.hpp>
-#include <Include/Aircraft.hpp>
-#include <Include/CommandQueue.hpp>
-#include <Include/Command.hpp>
-#include <Include/Pickup.hpp>
-#include <Include/BloomEffect.hpp>
-#include <Include/SoundPlayer.hpp>
-#include <Include/NetworkProtocol.hpp>
+#include "../Include/ResourceHolder.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
+#include "../Include/SceneNode.hpp"
+#include "../Include/SpriteNode.hpp"
+#include "../Include/Aircraft.hpp"
+#include "../Include/CommandQueue.hpp"
+#include "../Include/Command.hpp"
+#include "../Include/Pickup.hpp"
+#include "../Include/BloomEffect.hpp"
+#include "../Include/SoundPlayer.hpp"
+#include "../Include/NetworkProtocol.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Graphics/View.hpp>

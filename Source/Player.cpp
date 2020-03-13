@@ -1,8 +1,8 @@
-#include <Include/Player.hpp>
-#include <Include/CommandQueue.hpp>
-#include <Include/Aircraft.hpp>
-#include <Include/Foreach.hpp>
-#include <Include/NetworkProtocol.hpp>
+#include "../Include/Player.hpp"
+#include "../Include/CommandQueue.hpp"
+#include "../Include/Aircraft.hpp"
+#include "../Include/Foreach.hpp"
+#include "../Include/NetworkProtocol.hpp"
 
 #include <SFML/Network/Packet.hpp>
 

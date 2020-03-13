@@ -1,12 +1,12 @@
 #ifndef Include_AIRCRAFT_HPP
 #define Include_AIRCRAFT_HPP
 
-#include <Include/Entity.hpp>
-#include <Include/Command.hpp>
-#include <Include/ResourceIdentifiers.hpp>
-#include <Include/Projectile.hpp>
-#include <Include/TextNode.hpp>
-#include <Include/Animation.hpp>
+#include "../Include/Entity.hpp"
+#include "../Include/Command.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
+#include "../Include/Projectile.hpp"
+#include "../Include/TextNode.hpp"
+#include "../Include/Animation.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 

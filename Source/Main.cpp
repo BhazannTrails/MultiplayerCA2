@@ -1,4 +1,4 @@
-#include "../Include/Include/Aircraft.hpp"
+#include "../Include/Aircraft.hpp"
 
 #include <stdexcept>
 #include <iostream>

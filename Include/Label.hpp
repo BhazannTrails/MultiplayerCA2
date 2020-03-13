@@ -1,9 +1,9 @@
 #ifndef Include_LABEL_HPP
 #define Include_LABEL_HPP
 
-#include <Include/Component.hpp>
-#include <Include/ResourceIdentifiers.hpp>
-#include <Include/ResourceHolder.hpp>
+#include "../Include/Component.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
+#include "../Include/ResourceHolder.hpp"
 
 #include <SFML/Graphics/Text.hpp>
 

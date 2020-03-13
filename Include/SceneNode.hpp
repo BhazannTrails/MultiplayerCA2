@@ -1,7 +1,7 @@
 #ifndef Include_SCENENODE_HPP
 #define Include_SCENENODE_HPP
 
-#include <Include/Category.hpp>
+#include "../Include/Category.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/System/Time.hpp>

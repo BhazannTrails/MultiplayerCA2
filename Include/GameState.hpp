@@ -1,9 +1,9 @@
 #ifndef Include_GAMESTATE_HPP
 #define Include_GAMESTATE_HPP
 
-#include <Include/State.hpp>
-#include <Include/World.hpp>
-#include <Include/Player.hpp>
+#include "../Include/State.hpp"
+#include "../Include/World.hpp"
+#include "../Include/Player.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

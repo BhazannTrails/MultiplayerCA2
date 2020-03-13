@@ -1,9 +1,9 @@
 #ifndef Include_PICKUP_HPP
 #define Include_PICKUP_HPP
 
-#include <Include/Entity.hpp>
-#include <Include/Command.hpp>
-#include <Include/ResourceIdentifiers.hpp>
+#include "../Include/Entity.hpp"
+#include "../Include/Command.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 

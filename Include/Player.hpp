@@ -1,8 +1,8 @@
 #ifndef Include_PLAYER_HPP
 #define Include_PLAYER_HPP
 
-#include <Include/Command.hpp>
-#include <Include/KeyBinding.hpp>
+#include "../Include/Command.hpp"
+#include "../Include/KeyBinding.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Window/Event.hpp>

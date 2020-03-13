@@ -2,10 +2,10 @@
 #ifndef Include_BUTTON_HPP
 #define Include_BUTTON_HPP
 
-#include <Include/Component.hpp>
-#include <Include/ResourceIdentifiers.hpp>
-#include <Include/State.hpp>
-#include <Include/ResourceHolder.hpp>
+#include "../Include/Component.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
+#include "../Include/State.hpp"
+#include "../Include/ResourceHolder.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

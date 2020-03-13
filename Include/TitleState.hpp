@@ -1,7 +1,7 @@
 #ifndef Include_TITLESTATE_HPP
 #define Include_TITLESTATE_HPP
 
-#include <Include/State.hpp>
+#include "../Include/State.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

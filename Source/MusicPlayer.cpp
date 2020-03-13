@@ -1,4 +1,4 @@
-#include <Include/MusicPlayer.hpp>
+#include "../Include/MusicPlayer.hpp"
 
 
 MusicPlayer::MusicPlayer()

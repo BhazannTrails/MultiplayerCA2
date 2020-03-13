@@ -1,8 +1,8 @@
-#include <Include/PauseState.hpp>
-#include <Include/Button.hpp>
-#include <Include/Utility.hpp>
-#include <Include/MusicPlayer.hpp>
-#include <Include/ResourceHolder.hpp>
+#include "../Include/PauseState.hpp"
+#include "../Include/Button.hpp"
+#include "../Include/Utility.hpp"
+#include "../Include/MusicPlayer.hpp"
+#include "../Include/ResourceHolder.hpp"
 
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>

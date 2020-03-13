@@ -1,9 +1,9 @@
 #ifndef Include_BLOOMEFFECT_HPP
 #define Include_BLOOMEFFECT_HPP
 
-#include <Include/PostEffect.hpp>
-#include <Include/ResourceIdentifiers.hpp>
-#include <Include/ResourceHolder.hpp>
+#include "../Include/PostEffect.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
+#include "../Include/ResourceHolder.hpp"
 
 #include <SFML/Graphics/RenderTexture.hpp>
 #include <SFML/Graphics/Shader.hpp>

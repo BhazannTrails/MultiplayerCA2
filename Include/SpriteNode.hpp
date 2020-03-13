@@ -1,7 +1,7 @@
 #ifndef Include_SPRITENODE_HPP
 #define Include_SPRITENODE_HPP
 
-#include <Include/SceneNode.hpp>
+#include "../Include/SceneNode.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 

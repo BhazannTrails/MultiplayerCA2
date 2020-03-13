@@ -1,9 +1,9 @@
 #ifndef Include_TEXTNODE_HPP
 #define Include_TEXTNODE_HPP
 
-#include <Include/ResourceHolder.hpp>
-#include <Include/ResourceIdentifiers.hpp>
-#include <Include/SceneNode.hpp>
+#include "../Include/ResourceHolder.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
+#include "../Include/SceneNode.hpp"
 
 #include <SFML/Graphics/Text.hpp>
 #include <SFML/Graphics/Font.hpp>

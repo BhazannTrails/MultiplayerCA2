@@ -1,8 +1,8 @@
-#include <Include/DataTables.hpp>
-#include <Include/Aircraft.hpp>
-#include <Include/Projectile.hpp>
-#include <Include/Pickup.hpp>
-#include <Include/Particle.hpp>
+#include "../Include/DataTables.hpp"
+#include "../Include/Aircraft.hpp"
+#include "../Include/Projectile.hpp"
+#include "../Include/Pickup.hpp"
+#include "../Include/Particle.hpp"
 
 
 // For std::bind() placeholders _1, _2, ...

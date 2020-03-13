@@ -1,9 +1,9 @@
 #ifndef Include_PARTICLENODE_HPP
 #define Include_PARTICLENODE_HPP
 
-#include <Include/SceneNode.hpp>
-#include <Include/ResourceIdentifiers.hpp>
-#include <Include/Particle.hpp>
+#include "../Include/SceneNode.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
+#include "../Include/Particle.hpp"
 
 #include <SFML/Graphics/VertexArray.hpp>
 

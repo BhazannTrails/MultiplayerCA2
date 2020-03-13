@@ -1,8 +1,8 @@
 #ifndef Include_MUSICPLAYER_HPP
 #define Include_MUSICPLAYER_HPP
 
-#include <Include/ResourceHolder.hpp>
-#include <Include/ResourceIdentifiers.hpp>
+#include "../Include/ResourceHolder.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
 
 #include <SFML/System/NonCopyable.hpp>
 #include <SFML/Audio/Music.hpp>

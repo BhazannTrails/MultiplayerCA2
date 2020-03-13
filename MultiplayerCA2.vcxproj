@@ -75,11 +75,14 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\rianm\Desktop\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>C:\Users\rianm\Desktop\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;CRT_SECURE_NO_WARNINGS;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -178,102 +181,57 @@
     <ClCompile Include="source\World.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\Include\._ResourceHolder.inl" />
-    <None Include="include\Include\._Utility.inl" />
     <None Include="include\Include\ResourceHolder.inl" />
     <None Include="include\Include\Utility.inl" />
+    <None Include="Include\ResourceHolder.inl" />
+    <None Include="Include\Utility.inl" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Include\._Aircraft.hpp" />
-    <ClInclude Include="include\Include\._Animation.hpp" />
-    <ClInclude Include="include\Include\._Application.hpp" />
-    <ClInclude Include="include\Include\._BloomEffect.hpp" />
-    <ClInclude Include="include\Include\._Button.hpp" />
-    <ClInclude Include="include\Include\._Category.hpp" />
-    <ClInclude Include="include\Include\._Command.hpp" />
-    <ClInclude Include="include\Include\._CommandQueue.hpp" />
-    <ClInclude Include="include\Include\._Component.hpp" />
-    <ClInclude Include="include\Include\._Container.hpp" />
-    <ClInclude Include="include\Include\._DataTables.hpp" />
-    <ClInclude Include="include\Include\._EmitterNode.hpp" />
-    <ClInclude Include="include\Include\._Entity.hpp" />
-    <ClInclude Include="include\Include\._Foreach.hpp" />
-    <ClInclude Include="include\Include\._GameOverState.hpp" />
-    <ClInclude Include="include\Include\._GameServer.hpp" />
-    <ClInclude Include="include\Include\._GameState.hpp" />
-    <ClInclude Include="include\Include\._KeyBinding.hpp" />
-    <ClInclude Include="include\Include\._Label.hpp" />
-    <ClInclude Include="include\Include\._MenuState.hpp" />
-    <ClInclude Include="include\Include\._MultiplayerGameState.hpp" />
-    <ClInclude Include="include\Include\._MusicPlayer.hpp" />
-    <ClInclude Include="include\Include\._NetworkNode.hpp" />
-    <ClInclude Include="include\Include\._NetworkProtocol.hpp" />
-    <ClInclude Include="include\Include\._Particle.hpp" />
-    <ClInclude Include="include\Include\._ParticleNode.hpp" />
-    <ClInclude Include="include\Include\._PauseState.hpp" />
-    <ClInclude Include="include\Include\._Pickup.hpp" />
-    <ClInclude Include="include\Include\._Player.hpp" />
-    <ClInclude Include="include\Include\._PostEffect.hpp" />
-    <ClInclude Include="include\Include\._Projectile.hpp" />
-    <ClInclude Include="include\Include\._ResourceHolder.hpp" />
-    <ClInclude Include="include\Include\._ResourceIdentifiers.hpp" />
-    <ClInclude Include="include\Include\._SceneNode.hpp" />
-    <ClInclude Include="include\Include\._SettingsState.hpp" />
-    <ClInclude Include="include\Include\._SoundNode.hpp" />
-    <ClInclude Include="include\Include\._SoundPlayer.hpp" />
-    <ClInclude Include="include\Include\._SpriteNode.hpp" />
-    <ClInclude Include="include\Include\._State.hpp" />
-    <ClInclude Include="include\Include\._StateIdentifiers.hpp" />
-    <ClInclude Include="include\Include\._StateStack.hpp" />
-    <ClInclude Include="include\Include\._TextNode.hpp" />
-    <ClInclude Include="include\Include\._TitleState.hpp" />
-    <ClInclude Include="include\Include\._Utility.hpp" />
-    <ClInclude Include="include\Include\._World.hpp" />
-    <ClInclude Include="include\Include\Aircraft.hpp" />
-    <ClInclude Include="include\Include\Animation.hpp" />
-    <ClInclude Include="include\Include\Application.hpp" />
-    <ClInclude Include="include\Include\BloomEffect.hpp" />
-    <ClInclude Include="include\Include\Button.hpp" />
-    <ClInclude Include="include\Include\Category.hpp" />
-    <ClInclude Include="include\Include\Command.hpp" />
-    <ClInclude Include="include\Include\CommandQueue.hpp" />
-    <ClInclude Include="include\Include\Component.hpp" />
-    <ClInclude Include="include\Include\Container.hpp" />
-    <ClInclude Include="include\Include\DataTables.hpp" />
-    <ClInclude Include="include\Include\EmitterNode.hpp" />
-    <ClInclude Include="include\Include\Entity.hpp" />
-    <ClInclude Include="include\Include\Foreach.hpp" />
-    <ClInclude Include="include\Include\GameOverState.hpp" />
-    <ClInclude Include="include\Include\GameServer.hpp" />
-    <ClInclude Include="include\Include\GameState.hpp" />
-    <ClInclude Include="include\Include\KeyBinding.hpp" />
-    <ClInclude Include="include\Include\Label.hpp" />
-    <ClInclude Include="include\Include\MenuState.hpp" />
-    <ClInclude Include="include\Include\MultiplayerGameState.hpp" />
-    <ClInclude Include="include\Include\MusicPlayer.hpp" />
-    <ClInclude Include="include\Include\NetworkNode.hpp" />
-    <ClInclude Include="include\Include\NetworkProtocol.hpp" />
-    <ClInclude Include="include\Include\Particle.hpp" />
-    <ClInclude Include="include\Include\ParticleNode.hpp" />
-    <ClInclude Include="include\Include\PauseState.hpp" />
-    <ClInclude Include="include\Include\Pickup.hpp" />
-    <ClInclude Include="include\Include\Player.hpp" />
-    <ClInclude Include="include\Include\PostEffect.hpp" />
-    <ClInclude Include="include\Include\Projectile.hpp" />
-    <ClInclude Include="include\Include\ResourceHolder.hpp" />
-    <ClInclude Include="include\Include\ResourceIdentifiers.hpp" />
-    <ClInclude Include="include\Include\SceneNode.hpp" />
-    <ClInclude Include="include\Include\SettingsState.hpp" />
-    <ClInclude Include="include\Include\SoundNode.hpp" />
-    <ClInclude Include="include\Include\SoundPlayer.hpp" />
-    <ClInclude Include="include\Include\SpriteNode.hpp" />
-    <ClInclude Include="include\Include\State.hpp" />
-    <ClInclude Include="include\Include\StateIdentifiers.hpp" />
-    <ClInclude Include="include\Include\StateStack.hpp" />
-    <ClInclude Include="include\Include\TextNode.hpp" />
-    <ClInclude Include="include\Include\TitleState.hpp" />
-    <ClInclude Include="include\Include\Utility.hpp" />
-    <ClInclude Include="include\Include\World.hpp" />
+    <ClInclude Include="Include\Aircraft.hpp" />
+    <ClInclude Include="Include\Animation.hpp" />
+    <ClInclude Include="Include\Application.hpp" />
+    <ClInclude Include="Include\BloomEffect.hpp" />
+    <ClInclude Include="Include\Button.hpp" />
+    <ClInclude Include="Include\Category.hpp" />
+    <ClInclude Include="Include\Command.hpp" />
+    <ClInclude Include="Include\CommandQueue.hpp" />
+    <ClInclude Include="Include\Component.hpp" />
+    <ClInclude Include="Include\Container.hpp" />
+    <ClInclude Include="Include\DataTables.hpp" />
+    <ClInclude Include="Include\EmitterNode.hpp" />
+    <ClInclude Include="Include\Entity.hpp" />
+    <ClInclude Include="Include\Foreach.hpp" />
+    <ClInclude Include="Include\GameOverState.hpp" />
+    <ClInclude Include="Include\GameServer.hpp" />
+    <ClInclude Include="Include\GameState.hpp" />
+    <ClInclude Include="Include\KeyBinding.hpp" />
+    <ClInclude Include="Include\Label.hpp" />
+    <ClInclude Include="Include\MenuState.hpp" />
+    <ClInclude Include="Include\MultiplayerGameState.hpp" />
+    <ClInclude Include="Include\MusicPlayer.hpp" />
+    <ClInclude Include="Include\NetworkNode.hpp" />
+    <ClInclude Include="Include\NetworkProtocol.hpp" />
+    <ClInclude Include="Include\Particle.hpp" />
+    <ClInclude Include="Include\ParticleNode.hpp" />
+    <ClInclude Include="Include\PauseState.hpp" />
+    <ClInclude Include="Include\Pickup.hpp" />
+    <ClInclude Include="Include\Player.hpp" />
+    <ClInclude Include="Include\PostEffect.hpp" />
+    <ClInclude Include="Include\Projectile.hpp" />
+    <ClInclude Include="Include\ResourceHolder.hpp" />
+    <ClInclude Include="Include\ResourceIdentifiers.hpp" />
+    <ClInclude Include="Include\SceneNode.hpp" />
+    <ClInclude Include="Include\SettingsState.hpp" />
+    <ClInclude Include="Include\SoundNode.hpp" />
+    <ClInclude Include="Include\SoundPlayer.hpp" />
+    <ClInclude Include="Include\SpriteNode.hpp" />
+    <ClInclude Include="Include\State.hpp" />
+    <ClInclude Include="Include\StateIdentifiers.hpp" />
+    <ClInclude Include="Include\StateStack.hpp" />
+    <ClInclude Include="Include\TextNode.hpp" />
+    <ClInclude Include="Include\TitleState.hpp" />
+    <ClInclude Include="Include\Utility.hpp" />
+    <ClInclude Include="Include\World.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

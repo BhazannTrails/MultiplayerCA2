@@ -1,12 +1,12 @@
-#include <Include/World.hpp>
-#include <Include/Projectile.hpp>
-#include <Include/Pickup.hpp>
-#include <Include/Foreach.hpp>
-#include <Include/TextNode.hpp>
-#include <Include/ParticleNode.hpp>
-#include <Include/SoundNode.hpp>
-#include <Include/NetworkNode.hpp>
-#include <Include/Utility.hpp>
+#include "../Include/World.hpp"
+#include "../Include/Projectile.hpp"
+#include "../Include/Pickup.hpp"
+#include "../Include/Foreach.hpp"
+#include "../Include/TextNode.hpp"
+#include "../Include/ParticleNode.hpp"
+#include "../Include/SoundNode.hpp"
+#include "../Include/NetworkNode.hpp"
+#include "../Include/Utility.hpp"
 #include <SFML/Graphics/RenderTarget.hpp>
 
 #include <algorithm>

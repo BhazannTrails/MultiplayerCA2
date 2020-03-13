@@ -1,8 +1,8 @@
 #ifndef Include_STATE_HPP
 #define Include_STATE_HPP
 
-#include <Include/StateIdentifiers.hpp>
-#include <Include/ResourceIdentifiers.hpp>
+#include "../Include/StateIdentifiers.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Window/Event.hpp>

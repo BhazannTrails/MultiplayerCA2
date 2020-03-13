@@ -1,7 +1,7 @@
 #ifndef Include_DATATABLES_HPP
 #define Include_DATATABLES_HPP
 
-#include <Include/ResourceIdentifiers.hpp>
+#include "../Include/ResourceIdentifiers.hpp"
 
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/Color.hpp>

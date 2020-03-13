@@ -1,8 +1,8 @@
 #ifndef Include_NETWORKNODE_HPP
 #define Include_NETWORKNODE_HPP
 
-#include <Include/SceneNode.hpp>
-#include <Include/NetworkProtocol.hpp>
+#include "../Include/SceneNode.hpp"
+#include "../Include/NetworkProtocol.hpp"
 
 #include <queue>
 

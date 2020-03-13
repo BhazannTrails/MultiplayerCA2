@@ -1,8 +1,8 @@
 #ifndef Include_PROJECTILE_HPP
 #define Include_PROJECTILE_HPP
 
-#include <Include/Entity.hpp>
-#include <Include/ResourceIdentifiers.hpp>
+#include "../Include/Entity.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 

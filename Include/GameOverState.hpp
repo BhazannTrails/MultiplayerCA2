@@ -1,8 +1,8 @@
 #ifndef Include_GAMEOVERSTATE_HPP
 #define Include_GAMEOVERSTATE_HPP
 
-#include <Include/State.hpp>
-#include <Include/Container.hpp>
+#include "../Include/State.hpp"
+#include "../Include/Container.hpp"
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Text.hpp>

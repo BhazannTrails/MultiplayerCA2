@@ -1,8 +1,8 @@
 #ifndef Include_SOUNDNODE_HPP
 #define Include_SOUNDNODE_HPP
 
-#include <Include/SceneNode.hpp>
-#include <Include/ResourceIdentifiers.hpp>
+#include "../Include/SceneNode.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
 
 
 class SoundPlayer;

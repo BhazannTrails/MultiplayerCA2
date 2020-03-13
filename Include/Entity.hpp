@@ -1,7 +1,7 @@
 #ifndef Include_ENTITY_HPP
 #define Include_ENTITY_HPP
 
-#include <Include/SceneNode.hpp>
+#include "../Include/SceneNode.hpp"
 
 
 class Entity : public SceneNode

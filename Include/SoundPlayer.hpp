@@ -1,8 +1,8 @@
 #ifndef Include_SOUNDPLAYER_HPP
 #define Include_SOUNDPLAYER_HPP
 
-#include <Include/ResourceHolder.hpp>
-#include <Include/ResourceIdentifiers.hpp>
+#include "../Include/ResourceHolder.hpp"
+#include "../Include/ResourceIdentifiers.hpp"
 
 #include <SFML/System/Vector2.hpp>
 #include <SFML/System/NonCopyable.hpp>

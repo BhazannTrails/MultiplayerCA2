@@ -1,7 +1,7 @@
 #ifndef Include_COMMAND_HPP
 #define Include_COMMAND_HPP
 
-#include <Include/Category.hpp>
+#include "../Include/Category.hpp"
 
 #include <SFML/System/Time.hpp>
 
