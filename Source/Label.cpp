@@ -1,5 +1,5 @@
 #include "../Include/Label.hpp"
-#include "../Include/Utility.hpp"
+#include "../Include/Utility.inl"
 
 #include <SFML/Graphics/RenderStates.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>

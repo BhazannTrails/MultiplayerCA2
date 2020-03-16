@@ -22,6 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{3E05BDA3-A02A-4214-8B57-DD624AC3D3A2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -70,7 +71,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -82,7 +83,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>C:\Users\rianm\Desktop\SFML-2.5.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;CRT_SECURE_NO_WARNINGS;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -101,45 +102,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="source\._Aircraft.cpp" />
-    <ClCompile Include="source\._Animation.cpp" />
-    <ClCompile Include="source\._Application.cpp" />
-    <ClCompile Include="source\._BloomEffect.cpp" />
-    <ClCompile Include="source\._Button.cpp" />
-    <ClCompile Include="source\._Command.cpp" />
-    <ClCompile Include="source\._CommandQueue.cpp" />
-    <ClCompile Include="source\._Component.cpp" />
-    <ClCompile Include="source\._Container.cpp" />
-    <ClCompile Include="source\._DataTables.cpp" />
-    <ClCompile Include="source\._EmitterNode.cpp" />
-    <ClCompile Include="source\._Entity.cpp" />
-    <ClCompile Include="source\._GameOverState.cpp" />
-    <ClCompile Include="source\._GameServer.cpp" />
-    <ClCompile Include="source\._GameState.cpp" />
-    <ClCompile Include="source\._KeyBinding.cpp" />
-    <ClCompile Include="source\._Label.cpp" />
-    <ClCompile Include="source\._Main.cpp" />
-    <ClCompile Include="source\._MenuState.cpp" />
-    <ClCompile Include="source\._MultiplayerGameState.cpp" />
-    <ClCompile Include="source\._MusicPlayer.cpp" />
-    <ClCompile Include="source\._NetworkNode.cpp" />
-    <ClCompile Include="source\._ParticleNode.cpp" />
-    <ClCompile Include="source\._PauseState.cpp" />
-    <ClCompile Include="source\._Pickup.cpp" />
-    <ClCompile Include="source\._Player.cpp" />
-    <ClCompile Include="source\._PostEffect.cpp" />
-    <ClCompile Include="source\._Projectile.cpp" />
-    <ClCompile Include="source\._SceneNode.cpp" />
-    <ClCompile Include="source\._SettingsState.cpp" />
-    <ClCompile Include="source\._SoundNode.cpp" />
-    <ClCompile Include="source\._SoundPlayer.cpp" />
-    <ClCompile Include="source\._SpriteNode.cpp" />
-    <ClCompile Include="source\._State.cpp" />
-    <ClCompile Include="source\._StateStack.cpp" />
-    <ClCompile Include="source\._TextNode.cpp" />
-    <ClCompile Include="source\._TitleState.cpp" />
-    <ClCompile Include="source\._Utility.cpp" />
-    <ClCompile Include="source\._World.cpp" />
     <ClCompile Include="source\Aircraft.cpp" />
     <ClCompile Include="source\Animation.cpp" />
     <ClCompile Include="source\Application.cpp" />
@@ -181,8 +143,6 @@
     <ClCompile Include="source\World.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\Include\ResourceHolder.inl" />
-    <None Include="include\Include\Utility.inl" />
     <None Include="Include\ResourceHolder.inl" />
     <None Include="Include\Utility.inl" />
   </ItemGroup>

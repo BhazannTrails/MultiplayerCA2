@@ -1,5 +1,5 @@
 #include "../Include/Application.hpp"
-#include "../Include/Utility.hpp"
+#include "../Include/Utility.inl"
 #include "../Include/State.hpp"
 #include "../Include/StateIdentifiers.hpp"
 #include "../Include/TitleState.hpp"

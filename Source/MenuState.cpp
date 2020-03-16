@@ -1,6 +1,6 @@
 #include "../Include/MenuState.hpp"
 #include "../Include/Button.hpp"
-#include "../Include/Utility.hpp"
+#include "../Include/Utility.inl"
 #include "../Include/MusicPlayer.hpp"
 #include "../Include/ResourceHolder.hpp"
 

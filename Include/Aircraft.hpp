@@ -1,6 +1,6 @@
 #ifndef Include_AIRCRAFT_HPP
 #define Include_AIRCRAFT_HPP
-
+#include "../Include/Utility.hpp"
 #include "../Include/Entity.hpp"
 #include "../Include/Command.hpp"
 #include "../Include/ResourceIdentifiers.hpp"
@@ -45,7 +45,7 @@ class Aircraft : public Entity
 		void					setIdentifier(int identifier);
 		int						getMissileAmmo() const;
 		void					setMissileAmmo(int ammo);
-
+		
 
 	private:
 		virtual void			drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
@@ -75,7 +75,7 @@ class Aircraft : public Entity
 		bool					mExplosionBegan;
 		bool					mSpawnedPickup;
 		bool					mPickupsEnabled;
-
+		//void					centerOrigin;
 		int						mFireRateLevel;
 		int						mSpreadLevel;
 		int						mMissileAmmo;

@@ -11,6 +11,7 @@
 #include <SFML/Graphics/RenderStates.hpp>
 
 #include <cmath>
+#include <random>
 
 
 using namespace std::placeholders;

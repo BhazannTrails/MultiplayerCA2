@@ -6,7 +6,7 @@
 #include "../Include/ParticleNode.hpp"
 #include "../Include/SoundNode.hpp"
 #include "../Include/NetworkNode.hpp"
-#include "../Include/Utility.hpp"
+#include "../Include/Utility.inl"
 #include <SFML/Graphics/RenderTarget.hpp>
 
 #include <algorithm>

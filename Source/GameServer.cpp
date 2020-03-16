@@ -1,7 +1,7 @@
 #include "../Include/GameServer.hpp"
 #include "../Include/NetworkProtocol.hpp"
 #include "../Include/Foreach.hpp"
-#include "../Include/Utility.hpp"
+#include "../Include/Utility.inl"
 #include "../Include/Pickup.hpp"
 #include "../Include/Aircraft.hpp"
 
