@@ -43,7 +43,7 @@ void World::setWorldScrollCompensation(float compensation)
 void World::update(sf::Time dt)
 {
 	// Scroll the world, reset player velocity
-	mCamera.move(0.f, mScrollSpeed * dt.asSeconds()*mScrollSpeedCompensation);
+	mCamera.move(-mScrollSpeed * dt.asSeconds()*mScrollSpeedCompensation, 0.f);
 	
 	for (Aircraft* a : mPlayerAircraft)
 	{
@@ -200,7 +200,7 @@ void World::updateSounds()
 void World::loadTextures()
 {
 	mTextures.load(TextureID::Entities, "Media/Textures/Entities.png");
-	mTextures.load(TextureID::Jungle, "Media/Textures/Jungle.png");
+	mTextures.load(TextureID::Jungle, "Media/Textures/SpaceTitle.png");
 	mTextures.load(TextureID::Explosion, "Media/Textures/Explosion.png");
 	mTextures.load(TextureID::Particle, "Media/Textures/Particle.png");
 	mTextures.load(TextureID::FinishLine, "Media/Textures/FinishLine.png");
@@ -285,6 +285,7 @@ void World::buildScene()
 
 	sf::Texture& texture = mTextures.get(TextureID::Jungle);
 	sf::IntRect textureRect(mWorldBounds);
+	
 	texture.setRepeated(true);
 
 	// Add the background sprite to the scene
@@ -333,6 +334,7 @@ void World::adaptPlayerPosition()
 		position.y = std::max(position.y, viewBounds.top + borderDistance);
 		position.y = std::min(position.y, viewBounds.top + viewBounds.height - borderDistance);
 		aircraft->setPosition(position);
+		aircraft->setRotation(90);
 	}
 }
 
@@ -347,7 +349,7 @@ void World::adaptPlayerVelocity()
 			aircraft->setVelocity(velocity / std::sqrt(2.f));
 
 		// Add scrolling velocity
-		aircraft->accelerate(0.f, mScrollSpeed);
+		aircraft->accelerate(-mScrollSpeed, 0.f);
 	}
 }
 
