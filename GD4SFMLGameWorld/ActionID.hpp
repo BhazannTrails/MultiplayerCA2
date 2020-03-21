@@ -7,5 +7,7 @@ enum class ActionID
 	MoveDown,
 	Fire,
 	LaunchMissile,
-	ActionCount
+	ActionCount,
+	RotatePlayerClockwise,
+	RotatePlayerAntiClockwise
 };

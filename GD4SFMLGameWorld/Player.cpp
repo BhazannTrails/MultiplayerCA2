@@ -64,6 +64,23 @@ struct AircraftMissileTrigger
 	int aircraftID;
 };
 
+struct AircraftRotateTrigger
+{
+	AircraftRotateTrigger(int rotation, int identifier)
+		: rotation (rotation), aircraftID(identifier)
+	{
+	}
+
+	void operator() (Aircraft& aircraft, sf::Time) const
+	{
+		if (aircraft.getIdentifier() == aircraftID)
+			aircraft.rotate(rotation);
+	}
+
+	int aircraftID;
+	int rotation;
+};
+
 Player::Player(sf::TcpSocket* socket, sf::Int32 identifier, const KeyBinding* binding) : mKeyBinding(binding), mCurrentMissionStatus(MissionStatusID::MissionRunning), mIdentifier(identifier), mSocket(socket)
 {
 	// Set initial action bindings
@@ -172,5 +189,7 @@ void Player::initializeActions()
 	mActionBinding[ActionID::MoveUp].action = derivedAction<Aircraft>(AircraftMover(0, -1, mIdentifier));
 	mActionBinding[ActionID::MoveDown].action = derivedAction<Aircraft>(AircraftMover(0, +1, mIdentifier));
 	mActionBinding[ActionID::Fire].action = derivedAction<Aircraft>(AircraftFireTrigger(mIdentifier));
-	mActionBinding[ActionID::LaunchMissile].action = derivedAction<Aircraft>(AircraftMissileTrigger(mIdentifier));
+	//mActionBinding[ActionID::LaunchMissile].action = derivedAction<Aircraft>(AircraftMissileTrigger(mIdentifier));
+	mActionBinding[ActionID::RotatePlayerClockwise].action = derivedAction<Aircraft>(AircraftRotateTrigger(30, mIdentifier));
+	mActionBinding[ActionID::RotatePlayerAntiClockwise].action = derivedAction<Aircraft>(AircraftRotateTrigger(-30, mIdentifier));
 }

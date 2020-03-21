@@ -15,7 +15,9 @@ KeyBinding::KeyBinding(int controlPreconfiguration)
 		mKeyMap[sf::Keyboard::Up] = ActionID::MoveUp;
 		mKeyMap[sf::Keyboard::Down] = ActionID::MoveDown;
 		mKeyMap[sf::Keyboard::Space] = ActionID::Fire;
-		mKeyMap[sf::Keyboard::M] = ActionID::LaunchMissile;
+	//	mKeyMap[sf::Keyboard::M] = ActionID::LaunchMissile;
+		mKeyMap[sf::Keyboard::Q] = ActionID::RotatePlayerAntiClockwise;
+		mKeyMap[sf::Keyboard::E] = ActionID::RotatePlayerClockwise;
 	}
 	else if (controlPreconfiguration == 2)
 	{
@@ -25,7 +27,7 @@ KeyBinding::KeyBinding(int controlPreconfiguration)
 		mKeyMap[sf::Keyboard::W] = ActionID::MoveUp;
 		mKeyMap[sf::Keyboard::S] = ActionID::MoveDown;
 		mKeyMap[sf::Keyboard::F] = ActionID::Fire;
-		mKeyMap[sf::Keyboard::R] = ActionID::LaunchMissile;
+		//mKeyMap[sf::Keyboard::R] = ActionID::LaunchMissile;
 	}
 }
 

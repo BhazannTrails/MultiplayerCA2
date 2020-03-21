@@ -16,7 +16,7 @@ World::World(sf::RenderTarget& outputTarget, FontHolder& fonts, SoundPlayer& sou
 	, mTextures()
 	, mSceneGraph()
 	, mSceneLayers()
-	, mWorldBounds(0.f, 0.f, mCamera.getSize().x, 5000.f)
+	, mWorldBounds(0.f, 0.f, 5000.f, mCamera.getSize().x)
 	, mSpawnPosition(mCamera.getSize().x / 2.f, mWorldBounds.height - mCamera.getSize().y / 2.f)
 	, mScrollSpeed(-50.f)
 	, mScrollSpeedCompensation(1.f)
@@ -125,6 +125,7 @@ Aircraft* World::addAircraft(int identifier)
 	std::unique_ptr<Aircraft> player(new Aircraft(AircraftID::Eagle, mTextures, mFonts));
 	player->setPosition(mCamera.getCenter());
 	player->setIdentifier(identifier);
+	player->setRotation(90);
 
 	mPlayerAircraft.push_back(player.get());
 	mSceneLayers[static_cast<int>(LayerID::UpperAir)]->attachChild(std::move(player));
@@ -334,7 +335,7 @@ void World::adaptPlayerPosition()
 		position.y = std::max(position.y, viewBounds.top + borderDistance);
 		position.y = std::min(position.y, viewBounds.top + viewBounds.height - borderDistance);
 		aircraft->setPosition(position);
-		aircraft->setRotation(90);
+		//aircraft->setRotation(90);
 	}
 }
 
