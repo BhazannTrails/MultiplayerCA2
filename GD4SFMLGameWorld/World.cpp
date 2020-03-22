@@ -126,6 +126,7 @@ Aircraft* World::addAircraft(int identifier)
 	player->setPosition(mCamera.getCenter());
 	player->setIdentifier(identifier);
 	player->setRotation(90);
+	player->setScale(0.5, 0.5);
 
 	mPlayerAircraft.push_back(player.get());
 	mSceneLayers[static_cast<int>(LayerID::UpperAir)]->attachChild(std::move(player));
