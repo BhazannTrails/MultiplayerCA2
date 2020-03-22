@@ -182,7 +182,7 @@ void Aircraft::remove()
 
 bool Aircraft::isAllied() const
 {
-	return mType == AircraftID::Eagle;
+	return mType == AircraftID::Player;
 }
 
 float Aircraft::getMaxSpeed() const

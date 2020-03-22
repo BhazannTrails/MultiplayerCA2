@@ -122,7 +122,7 @@ void World::removeAircraft(int identifier)
 
 Aircraft* World::addAircraft(int identifier)
 {
-	std::unique_ptr<Aircraft> player(new Aircraft(AircraftID::Eagle, mTextures, mFonts));
+	std::unique_ptr<Aircraft> player(new Aircraft(AircraftID::Player, mTextures, mFonts));
 	player->setPosition(mCamera.getCenter());
 	player->setIdentifier(identifier);
 	player->setRotation(90);
@@ -201,6 +201,7 @@ void World::updateSounds()
 void World::loadTextures()
 {
 	mTextures.load(TextureID::Entities, "Media/Textures/Entities.png");
+	mTextures.load(TextureID::Player, "Media/Textures/Player.png");
 	mTextures.load(TextureID::Jungle, "Media/Textures/SpaceTitle.png");
 	mTextures.load(TextureID::Explosion, "Media/Textures/Explosion.png");
 	mTextures.load(TextureID::Particle, "Media/Textures/Particle.png");
