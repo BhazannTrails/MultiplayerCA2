@@ -37,7 +37,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 	joinPlayButton->setCallback([this]()
 	{
 		requestStackPop();
-		requestStackPush(StateID::JoinGame);
+		requestStackPush(StateID::NamePlayer);
 	});
 
 	auto settingsButton = std::make_shared<GUI::Button>(context);

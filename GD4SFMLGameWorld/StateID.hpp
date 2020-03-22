@@ -11,5 +11,6 @@ enum class StateID
 	NetworkPause,
 	MissionSuccess,
 	HostGame,
-	JoinGame
+	JoinGame,
+	NamePlayer
 };
