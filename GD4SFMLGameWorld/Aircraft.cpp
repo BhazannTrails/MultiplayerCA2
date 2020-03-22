@@ -290,7 +290,7 @@ void Aircraft::checkProjectileLaunch(sf::Time dt, CommandQueue& commands)
 	{
 		// Interval expired: We can fire a new bullet
 		commands.push(mFireCommand);
-		playerLocalSound(commands, isAllied() ? SoundEffectID::AlliedGunfire : SoundEffectID::EnemyGunfire);
+		playerLocalSound(commands, isAllied() ? SoundEffectID::LaserFire : SoundEffectID::EnemyGunfire);
 		mFireCountdown += Table[static_cast<int>(mType)].fireInterval / (mFireRateLevel + 1.f);
 		mIsFiring = false;
 	}

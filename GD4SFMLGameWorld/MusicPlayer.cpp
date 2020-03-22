@@ -5,7 +5,7 @@ MusicPlayer::MusicPlayer()
 	, mFilenames()
 	, mVolume(0.5f)
 {
-	mFilenames[MusicID::MenuTheme] = "Media/Music/MenuTheme.ogg";
+	mFilenames[MusicID::MenuTheme] = "Media/Music/MenuMusic.ogg";
 	mFilenames[MusicID::MissionTheme] = "Media/Music/MissionTheme.ogg";
 }
 
