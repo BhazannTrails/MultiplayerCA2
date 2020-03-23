@@ -23,6 +23,14 @@ NamePlayer::NamePlayer(StateStack & stack, Context context) :State(stack, contex
 		PlayerText.setString(PlayerInput);
 	}
 
+	auto joinPlayButton = std::make_shared<GUI::Button>(context);
+	joinPlayButton->setPosition(750.f, 620.f);
+	joinPlayButton->setText("Join");
+	joinPlayButton->setCallback([this]()
+	{
+		requestStackPop();
+		requestStackPush(StateID::JoinGame);
+	});
 		
 
 	auto backButton = std::make_shared<GUI::Button>(context);
@@ -31,6 +39,7 @@ NamePlayer::NamePlayer(StateStack & stack, Context context) :State(stack, contex
 	backButton->setCallback(std::bind(&NamePlayer::requestStackPop, this));
 
 	mGUIContainer.pack(backButton);
+	mGUIContainer.pack(joinPlayButton);
 }
 
 void NamePlayer::draw()
