@@ -36,7 +36,7 @@ MenuState::MenuState(StateStack& stack, Context context)
 	joinPlayButton->setText("Join");
 	joinPlayButton->setCallback([this]()
 	{
-		requestStackPop();
+		//requestStackPop();
 		requestStackPush(StateID::NamePlayer);
 	});
 

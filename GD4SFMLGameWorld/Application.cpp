@@ -7,6 +7,7 @@
 #include "SettingsState.hpp"
 #include "GameOverState.hpp"
 #include "MultiplayerGameState.hpp"
+#include "NamePlayer.hpp"
 
 const sf::Time Application::TimePerFrame = sf::seconds(1.f / 60.f);
 
@@ -115,6 +116,7 @@ void Application::registerStates()
 	mStateStack.registerState<PauseState>(StateID::Pause);
 	mStateStack.registerState<PauseState>(StateID::NetworkPause, true);
 	mStateStack.registerState<SettingState>(StateID::Settings);
+	mStateStack.registerState<NamePlayer>(StateID::NamePlayer);
 	mStateStack.registerState<GameOverState>(StateID::GameOver, "Mission Failed!");
 	mStateStack.registerState<GameOverState>(StateID::MissionSuccess, "Mission Successful!");
 }
