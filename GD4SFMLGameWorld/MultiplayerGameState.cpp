@@ -262,7 +262,7 @@ bool MultiplayerGameState::handleEvent(const sf::Event& event)
 
 	if (event.type == sf::Event::KeyPressed)
 	{
-		// Enter pressed, add second player co-op (only if we are one player)
+		// pressed, add second player co-op (only if we are one player)
 		if (event.key.code == sf::Keyboard::Return && mLocalPlayerIdentifiers.size() == 1)
 		{
 			sf::Packet packet;
@@ -355,7 +355,7 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 		sf::Vector2f aircraftPosition;
 		packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y;
 
-		Aircraft* aircraft = mWorld.addAircraft(aircraftIdentifier);
+		Aircraft* aircraft = mWorld.addAdditionalAircraft(aircraftIdentifier);
 		aircraft->setPosition(aircraftPosition);
 
 		mPlayers[aircraftIdentifier].reset(new Player(&mSocket, aircraftIdentifier, nullptr));
@@ -405,7 +405,7 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 		sf::Int32 aircraftIdentifier;
 		packet >> aircraftIdentifier;
 
-		mWorld.addAircraft(aircraftIdentifier);
+		mWorld.addAdditionalAircraft(aircraftIdentifier);
 		mPlayers[aircraftIdentifier].reset(new Player(&mSocket, aircraftIdentifier, getContext().keys2));
 		mLocalPlayerIdentifiers.push_back(aircraftIdentifier);
 	} break;

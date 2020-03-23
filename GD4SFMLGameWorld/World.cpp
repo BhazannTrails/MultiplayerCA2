@@ -133,6 +133,18 @@ Aircraft* World::addAircraft(int identifier)
 	return mPlayerAircraft.back();
 }
 
+Aircraft* World::addAdditionalAircraft(int identifier) {
+	std::unique_ptr<Aircraft> player(new Aircraft(AircraftID::Player2, mTextures, mFonts));
+	player->setPosition(mCamera.getCenter());
+	player->setIdentifier(identifier);
+	player->setRotation(90);
+	player->setScale(0.5, 0.5);
+
+	mPlayerAircraft.push_back(player.get());
+	mSceneLayers[static_cast<int>(LayerID::UpperAir)]->attachChild(std::move(player));
+	return mPlayerAircraft.back();
+}
+
 void World::createPickup(sf::Vector2f position, PickupID type)
 {
 	std::unique_ptr<Pickup> pickup(new Pickup(type, mTextures));
@@ -204,6 +216,7 @@ void World::loadTextures()
 	mTextures.load(TextureID::Entities, "Media/Textures/Entities.png");
 	mTextures.load(TextureID::Player, "Media/Textures/Player.png");
 	mTextures.load(TextureID::Jungle, "Media/Textures/SpaceTitle.png");
+	mTextures.load(TextureID::Player2, "Media/Textures/Player2.png");
 	mTextures.load(TextureID::Explosion, "Media/Textures/Explosion.png");
 	mTextures.load(TextureID::Particle, "Media/Textures/Particle.png");
 	mTextures.load(TextureID::FinishLine, "Media/Textures/FinishLine.png");
@@ -245,6 +258,17 @@ void World::handleCollisions()
 			// Collision: Player damage = enemy's remaining HP
 			player.damage(enemy.getHitpoints());
 			enemy.destroy();
+		}
+
+		if (matchesCategories(pair, CategoryID::Player2Aircraft, CategoryID::PlayerAircraft)) {
+
+			auto& player = static_cast<Aircraft&>(*pair.first);
+			auto& enemy = static_cast<Aircraft&>(*pair.second);
+
+			// Collision: Player damage = enemy's remaining HP
+			player.damage(enemy.getHitpoints());
+			enemy.destroy();
+
 		}
 
 		else if (matchesCategories(pair, CategoryID::PlayerAircraft, CategoryID::Pickup))

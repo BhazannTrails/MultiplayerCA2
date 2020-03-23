@@ -7,6 +7,7 @@ enum class CategoryID
 	SceneAirLayer = 1 << 0,
 	PlayerAircraft = 1 << 1,
 	AlliedAircraft = 1 << 2,
+	Player2Aircraft,
 	EnemyAircraft = 1 << 3,
 	Pickup = 1 << 4,
 	AlliedProjectile = 1 << 5,
@@ -15,6 +16,6 @@ enum class CategoryID
 	SoundEffect = 1 << 8,
 	Network = 1 << 9,
 
-	Aircraft = PlayerAircraft | AlliedAircraft | EnemyAircraft,
+	Aircraft = PlayerAircraft | AlliedAircraft | EnemyAircraft | Player2Aircraft,
 	Projectile = AlliedProjectile | EnemyProjectile,
 };

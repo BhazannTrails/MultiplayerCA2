@@ -40,6 +40,7 @@ public:
 	CommandQueue& getCommandQueue();
 
 	Aircraft* addAircraft(int identifier);
+	Aircraft * addAdditionalAircraft(int identifier);
 	void removeAircraft(int identifier);
 	void setCurrentBattleFieldPosition(float lineY);
 	void setWorldHeight(float height);
