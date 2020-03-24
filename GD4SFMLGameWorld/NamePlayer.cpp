@@ -13,15 +13,33 @@ sf::Event event;
 
 NamePlayer::NamePlayer(StateStack & stack, Context context) :State(stack, context), mGUIContainer()
 {
+	sf::RenderWindow& window = *getContext().window;
+	//sf::RenderWindow window(sf::VideoMode(1180, 600), "PANZER_WAR:TPL_GAME", sf::Style::None);
+	sf::Font font;
 	mBackgroundSprite.setTexture(context.textures->get(TextureID::TitleScreen));
-	PlayerText.setPosition(60, 300);
+	/*PlayerText.setPosition(300, 300);
 	PlayerText.setFillColor(sf::Color::White);
 	if (event.type == sf::Event::TextEntered)
 	{
 		
 		PlayerInput += event.text.unicode;
 		PlayerText.setString(PlayerInput);
-	}
+	}*/
+
+
+		while (window.pollEvent(event))
+		{
+			if (event.type == sf::Event::TextEntered)
+			{
+				if (event.text.unicode < 128)
+				{
+					PlayerInput += event.text.unicode;
+					PlayerText.setString(PlayerInput);
+				}
+			}
+			window.draw(PlayerText);
+		}
+		window.display();
 
 	auto joinPlayButton = std::make_shared<GUI::Button>(context);
 	joinPlayButton->setPosition(750.f, 620.f);
@@ -40,6 +58,7 @@ NamePlayer::NamePlayer(StateStack & stack, Context context) :State(stack, contex
 
 	mGUIContainer.pack(backButton);
 	mGUIContainer.pack(joinPlayButton);
+	window.draw(PlayerText);
 }
 
 void NamePlayer::draw()

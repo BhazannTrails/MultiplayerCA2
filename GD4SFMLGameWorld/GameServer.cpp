@@ -17,9 +17,9 @@ GameServer::GameServer(sf::Vector2f battlefieldSize)
 	: mThread(&GameServer::executionThread, this)
 	, mListeningState(false)
 	, mClientTimeoutTime(sf::seconds(3.f))
-	, mMaxConnectedPlayers(10)
+	, mMaxConnectedPlayers(14)
 	, mConnectedPlayers(0)
-	, mWorldHeight(5000.f)
+	, mWorldHeight(768.f)
 	, mBattleFieldRect(0.f, mWorldHeight - battlefieldSize.y, battlefieldSize.x, battlefieldSize.y)
 	, mBattleFieldScrollSpeed(-50.f)
 	, mAircraftCount(0)
@@ -126,7 +126,7 @@ void GameServer::executionThread()
 		// Fixed update step
 		while (stepTime >= stepInterval)
 		{
-			mBattleFieldRect.top += mBattleFieldScrollSpeed * stepInterval.asSeconds();
+			//mBattleFieldRect.top += mBattleFieldScrollSpeed * stepInterval.asSeconds();
 			stepTime -= stepInterval;
 		}
 
