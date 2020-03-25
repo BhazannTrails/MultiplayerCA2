@@ -171,43 +171,43 @@ void GameServer::tick()
 	}
 
 	// Check if its time to attempt to spawn enemies
-	if (now() >= mTimeForNextSpawn + mLastSpawnTime)
-	{
-		// No more enemies are spawned near the end
-		if (mBattleFieldRect.top > 600.f)
-		{
-			std::size_t enemyCount = 1u + randomInt(2);
-			float spawnCenter = static_cast<float>(randomInt(500) - 250);
+	//if (now() >= mTimeForNextSpawn + mLastSpawnTime)
+	//{
+	//	// No more enemies are spawned near the end
+	//	if (mBattleFieldRect.top > 600.f)
+	//	{
+	//		std::size_t enemyCount = 1u + randomInt(2);
+	//		float spawnCenter = static_cast<float>(randomInt(500) - 250);
 
-			// In case only one enemy is being spawned, it appears directly at the spawnCenter
-			float planeDistance = 0.f;
-			float nextSpawnPosition = spawnCenter;
+	//		// In case only one enemy is being spawned, it appears directly at the spawnCenter
+	//		float planeDistance = 0.f;
+	//		float nextSpawnPosition = spawnCenter;
 
-			// In case there are two enemies being spawned together, each is spawned at each side of the spawnCenter, with a minimum distance
-			if (enemyCount == 2)
-			{
-				planeDistance = static_cast<float>(150 + randomInt(250));
-				nextSpawnPosition = spawnCenter - planeDistance / 2.f;
-			}
+	//		// In case there are two enemies being spawned together, each is spawned at each side of the spawnCenter, with a minimum distance
+	//		if (enemyCount == 2)
+	//		{
+	//			planeDistance = static_cast<float>(150 + randomInt(250));
+	//			nextSpawnPosition = spawnCenter - planeDistance / 2.f;
+	//		}
 
-			// Send the spawn orders to all clients
-			for (std::size_t i = 0; i < enemyCount; ++i)
-			{
-				sf::Packet packet;
-				packet << static_cast<sf::Int32>(Server::PacketType::SpawnEnemy);
-				packet << static_cast<sf::Int32>(1 + randomInt(static_cast<int>(AircraftID::TypeCount) - 1));
-				packet << mWorldHeight - mBattleFieldRect.top + 500;
-				packet << nextSpawnPosition;
+	//		// Send the spawn orders to all clients
+	//		for (std::size_t i = 0; i < enemyCount; ++i)
+	//		{
+	//			sf::Packet packet;
+	//			packet << static_cast<sf::Int32>(Server::PacketType::SpawnEnemy);
+	//			packet << static_cast<sf::Int32>(1 + randomInt(static_cast<int>(AircraftID::TypeCount) - 1));
+	//			packet << mWorldHeight - mBattleFieldRect.top + 500;
+	//			packet << nextSpawnPosition;
 
-				nextSpawnPosition += planeDistance / 2.f;
+	//			nextSpawnPosition += planeDistance / 2.f;
 
-				sendToAll(packet);
-			}
+	//			sendToAll(packet);
+	//		}
 
-			mLastSpawnTime = now();
-			mTimeForNextSpawn = sf::milliseconds(2000 + randomInt(6000));
-		}
-	}
+	//		mLastSpawnTime = now();
+	//		mTimeForNextSpawn = sf::milliseconds(2000 + randomInt(6000));
+	//	}
+	//}
 }
 
 sf::Time GameServer::now() const
@@ -319,12 +319,12 @@ void GameServer::handleIncomingPacket(sf::Packet& packet, RemotePeer& receivingP
 		{
 			sf::Int32 aircraftIdentifier;
 			sf::Int32 aircraftHitpoints;
-			sf::Int32 missileAmmo;
+			//sf::Int32 missileAmmo;
 			sf::Vector2f aircraftPosition;
-			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y >> aircraftHitpoints >> missileAmmo;
+			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y >> aircraftHitpoints;
 			mAircraftInfo[aircraftIdentifier].position = aircraftPosition;
 			mAircraftInfo[aircraftIdentifier].hitpoints = aircraftHitpoints;
-			mAircraftInfo[aircraftIdentifier].missileAmmo = missileAmmo;
+			//mAircraftInfo[aircraftIdentifier].missileAmmo = missileAmmo;
 		}
 	} break;
 
@@ -358,7 +358,7 @@ void GameServer::updateClientState()
 {
 	sf::Packet updateClientStatePacket;
 	updateClientStatePacket << static_cast<sf::Int32>(Server::PacketType::UpdateClientState);
-	updateClientStatePacket << static_cast<float>(mBattleFieldRect.top + mBattleFieldRect.height);
+	updateClientStatePacket << static_cast<float>(mBattleFieldRect.left + mBattleFieldRect.width);
 	updateClientStatePacket << static_cast<sf::Int32>(mAircraftInfo.size());
 
 	for(auto aircraft : mAircraftInfo)
@@ -377,7 +377,7 @@ void GameServer::handleIncomingConnections()
 		// order the new client to spawn its own plane ( player 1 )
 		mAircraftInfo[mAircraftIdentifierCounter].position = sf::Vector2f(mBattleFieldRect.width / 2, mBattleFieldRect.top + mBattleFieldRect.height / 2);
 		mAircraftInfo[mAircraftIdentifierCounter].hitpoints = 100;
-		mAircraftInfo[mAircraftIdentifierCounter].missileAmmo = 2;
+		//mAircraftInfo[mAircraftIdentifierCounter].missileAmmo = 2;
 
 		sf::Packet packet;
 		packet << static_cast<sf::Int32>(Server::PacketType::SpawnSelf);
@@ -452,7 +452,7 @@ void GameServer::informWorldState(sf::TcpSocket& socket)
 		if (mPeers[i]->ready)
 		{
 			for(sf::Int32 identifier : mPeers[i]->aircraftIdentifiers)
-				packet << identifier << mAircraftInfo[identifier].position.x << mAircraftInfo[identifier].position.y << mAircraftInfo[identifier].hitpoints << mAircraftInfo[identifier].missileAmmo;
+				packet << identifier << mAircraftInfo[identifier].position.x << mAircraftInfo[identifier].position.y << mAircraftInfo[identifier].hitpoints;
 		}
 	}
 

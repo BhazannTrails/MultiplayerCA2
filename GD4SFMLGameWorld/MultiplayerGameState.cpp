@@ -262,17 +262,17 @@ bool MultiplayerGameState::handleEvent(const sf::Event& event)
 
 	if (event.type == sf::Event::KeyPressed)
 	{
-		// pressed, add second player co-op (only if we are one player)
-		if (event.key.code == sf::Keyboard::Return && mLocalPlayerIdentifiers.size() == 1)
-		{
-			sf::Packet packet;
-			packet << static_cast<sf::Int32>(Client::PacketType::RequestCoopPartner);
+		//// pressed, add second player co-op (only if we are one player)
+		//if (event.key.code == sf::Keyboard::Return && mLocalPlayerIdentifiers.size() == 1)
+		//{
+		//	sf::Packet packet;
+		//	packet << static_cast<sf::Int32>(Client::PacketType::RequestCoopPartner);
 
-			mSocket.send(packet);
-		}
+		//	mSocket.send(packet);
+		//}
 
 		// Escape pressed, trigger the pause screen
-		else if (event.key.code == sf::Keyboard::Escape)
+		if (event.key.code == sf::Keyboard::Escape)
 		{
 			disableAllRealtimeActions();
 			requestStackPush(StateID::NetworkPause);
@@ -386,21 +386,21 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 		{
 			sf::Int32 aircraftIdentifier;
 			sf::Int32 hitpoints;
-			sf::Int32 missileAmmo;
+			//sf::Int32 missileAmmo;
 			sf::Vector2f aircraftPosition;
-			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y >> hitpoints >> missileAmmo;
+			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y >> hitpoints;
 
 			Aircraft* aircraft = mWorld.addAircraft(aircraftIdentifier);
 			aircraft->setPosition(aircraftPosition);
 			aircraft->setHitpoints(hitpoints);
-			aircraft->setMissileAmmo(missileAmmo);
+			//aircraft->setMissileAmmo(missileAmmo);
 
 			mPlayers[aircraftIdentifier].reset(new Player(&mSocket, aircraftIdentifier, nullptr));
 		}
 	} break;
 
 	//
-	case static_cast<int>(Server::PacketType::AcceptCoopPartner):
+	/*case static_cast<int>(Server::PacketType::AcceptCoopPartner):
 	{
 		sf::Int32 aircraftIdentifier;
 		packet >> aircraftIdentifier;
@@ -408,7 +408,7 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 		mWorld.addAdditionalAircraft(aircraftIdentifier);
 		mPlayers[aircraftIdentifier].reset(new Player(&mSocket, aircraftIdentifier, getContext().keys2));
 		mLocalPlayerIdentifiers.push_back(aircraftIdentifier);
-	} break;
+	} break;*/
 
 	// Player event (like missile fired) occurs
 	case static_cast<int>(Server::PacketType::PlayerEvent):
@@ -435,17 +435,17 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 			itr->second->handleNetworkRealtimeChange(static_cast<ActionID>(action), actionEnabled);
 	} break;
 
-	// New enemy to be created
-	case static_cast<int>(Server::PacketType::SpawnEnemy):
-	{
-		float height;
-		sf::Int32 type;
-		float relativeX;
-		packet >> type >> height >> relativeX;
+	//// New enemy to be created
+	//case static_cast<int>(Server::PacketType::SpawnEnemy):
+	//{
+	//	float height;
+	//	sf::Int32 type;
+	//	float relativeX;
+	//	packet >> type >> height >> relativeX;
 
-		mWorld.addEnemy(static_cast<AircraftID>(type), relativeX, height);
-		mWorld.sortEnemies();
-	} break;
+	//	mWorld.addEnemy(static_cast<AircraftID>(type), relativeX, height);
+	//	mWorld.sortEnemies();
+	//} break;
 
 	// Mission successfully completed
 	case static_cast<int>(Server::PacketType::MissionSuccess):
@@ -470,10 +470,10 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 		sf::Int32 aircraftCount;
 		packet >> currentWorldPosition >> aircraftCount;
 
-		float currentViewPosition = mWorld.getViewBounds().top + mWorld.getViewBounds().height;
+		float currentViewPosition = mWorld.getViewBounds().left + mWorld.getViewBounds().width;
 
 		// Set the world's scroll compensation according to whether the view is behind or too advanced
-		mWorld.setWorldScrollCompensation(currentViewPosition / currentWorldPosition);
+		//mWorld.setWorldScrollCompensation(currentViewPosition / currentWorldPosition);
 
 		for (sf::Int32 i = 0; i < aircraftCount; ++i)
 		{

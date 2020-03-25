@@ -19,16 +19,16 @@ KeyBinding::KeyBinding(int controlPreconfiguration)
 		mKeyMap[sf::Keyboard::Q] = ActionID::RotatePlayerAntiClockwise;
 		mKeyMap[sf::Keyboard::E] = ActionID::RotatePlayerClockwise;
 	}
-	else if (controlPreconfiguration == 2)
-	{
-		// Player 2
-		mKeyMap[sf::Keyboard::A] = ActionID::MoveLeft;
-		mKeyMap[sf::Keyboard::D] = ActionID::MoveRight;
-		mKeyMap[sf::Keyboard::W] = ActionID::MoveUp;
-		mKeyMap[sf::Keyboard::S] = ActionID::MoveDown;
-		mKeyMap[sf::Keyboard::F] = ActionID::Fire;
-		//mKeyMap[sf::Keyboard::R] = ActionID::LaunchMissile;
-	}
+	//else if (controlPreconfiguration == 2)
+	//{
+	//	// Player 2
+	//	mKeyMap[sf::Keyboard::A] = ActionID::MoveLeft;
+	//	mKeyMap[sf::Keyboard::D] = ActionID::MoveRight;
+	//	mKeyMap[sf::Keyboard::W] = ActionID::MoveUp;
+	//	mKeyMap[sf::Keyboard::S] = ActionID::MoveDown;
+	//	mKeyMap[sf::Keyboard::F] = ActionID::Fire;
+	//	//mKeyMap[sf::Keyboard::R] = ActionID::LaunchMissile;
+	//}
 }
 
 void KeyBinding::assignKey(Action action, sf::Keyboard::Key key)
@@ -95,6 +95,8 @@ bool isRealtimeAction(ActionID action)
 	case ActionID::MoveDown:
 	case ActionID::MoveUp:
 	case ActionID::Fire:
+	case ActionID::RotatePlayerClockwise:
+	case ActionID::RotatePlayerAntiClockwise:
 		return true;
 
 	default:
