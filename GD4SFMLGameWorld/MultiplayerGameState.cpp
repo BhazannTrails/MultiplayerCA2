@@ -223,7 +223,7 @@ bool MultiplayerGameState::update(sf::Time dt)
 			for(sf::Int32 identifier : mLocalPlayerIdentifiers)
 			{
 				if (Aircraft* aircraft = mWorld.getAircraft(identifier))
-					positionUpdatePacket << identifier << aircraft->getPosition().x << aircraft->getPosition().y << static_cast<sf::Int32>(aircraft->getHitpoints()) << static_cast<sf::Int32>(aircraft->getMissileAmmo());
+					positionUpdatePacket << identifier << aircraft->getPosition().x << aircraft->getPosition().y << static_cast<sf::Int32>(aircraft->getHitpoints()) << static_cast<sf::Int32>(aircraft->getRotation());
 			}
 
 			mSocket.send(positionUpdatePacket);
@@ -388,11 +388,13 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 			sf::Int32 hitpoints;
 			//sf::Int32 missileAmmo;
 			sf::Vector2f aircraftPosition;
-			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y >> hitpoints;
+			sf::Int32 aircraftRotation;
+			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y >> hitpoints >> aircraftRotation;
 
 			Aircraft* aircraft = mWorld.addAircraft(aircraftIdentifier);
 			aircraft->setPosition(aircraftPosition);
 			aircraft->setHitpoints(hitpoints);
+			aircraft->setRotation(aircraftRotation);
 			//aircraft->setMissileAmmo(missileAmmo);
 
 			mPlayers[aircraftIdentifier].reset(new Player(&mSocket, aircraftIdentifier, nullptr));
@@ -479,14 +481,17 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 		{
 			sf::Vector2f aircraftPosition;
 			sf::Int32 aircraftIdentifier;
-			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y;
+			sf::Int32 aircraftRotation;
+			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y >> aircraftRotation;
 
 			Aircraft* aircraft = mWorld.getAircraft(aircraftIdentifier);
 			bool isLocalPlane = std::find(mLocalPlayerIdentifiers.begin(), mLocalPlayerIdentifiers.end(), aircraftIdentifier) != mLocalPlayerIdentifiers.end();
 			if (aircraft && !isLocalPlane)
 			{
 				sf::Vector2f interpolatedPosition = aircraft->getPosition() + (aircraftPosition - aircraft->getPosition()) * 0.1f;
+				sf::Int32 interpolatedRotation = aircraft->getRotation() + (aircraftRotation - aircraft->getRotation()) * 0.1f;
 				aircraft->setPosition(interpolatedPosition);
+				aircraft->setRotation(interpolatedRotation);
 			}
 		}
 	} break;

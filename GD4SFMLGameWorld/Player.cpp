@@ -48,21 +48,21 @@ struct AircraftFireTrigger
 	int aircraftID;
 };
 
-struct AircraftMissileTrigger
-{
-	AircraftMissileTrigger(int identifier)
-		: aircraftID(identifier)
-	{
-	}
-
-	void operator() (Aircraft& aircraft, sf::Time) const
-	{
-		if (aircraft.getIdentifier() == aircraftID)
-			aircraft.launchMissile();
-	}
-
-	int aircraftID;
-};
+//struct AircraftMissileTrigger
+//{
+//	AircraftMissileTrigger(int identifier)
+//		: aircraftID(identifier)
+//	{
+//	}
+//
+//	void operator() (Aircraft& aircraft, sf::Time) const
+//	{
+//		if (aircraft.getIdentifier() == aircraftID)
+//			aircraft.launchMissile();
+//	}
+//
+//	int aircraftID;
+//};
 
 struct AircraftRotateTrigger
 {
@@ -190,6 +190,6 @@ void Player::initializeActions()
 	mActionBinding[ActionID::MoveDown].action = derivedAction<Aircraft>(AircraftMover(0, +1, mIdentifier));
 	mActionBinding[ActionID::Fire].action = derivedAction<Aircraft>(AircraftFireTrigger(mIdentifier));
 	//mActionBinding[ActionID::LaunchMissile].action = derivedAction<Aircraft>(AircraftMissileTrigger(mIdentifier));
-	mActionBinding[ActionID::RotatePlayerClockwise].action = derivedAction<Aircraft>(AircraftRotateTrigger(30, mIdentifier));
-	mActionBinding[ActionID::RotatePlayerAntiClockwise].action = derivedAction<Aircraft>(AircraftRotateTrigger(-30, mIdentifier));
+	mActionBinding[ActionID::RotatePlayerClockwise].action = derivedAction<Aircraft>(AircraftRotateTrigger(1, mIdentifier));
+	mActionBinding[ActionID::RotatePlayerAntiClockwise].action = derivedAction<Aircraft>(AircraftRotateTrigger(-1, mIdentifier));
 }

@@ -321,9 +321,11 @@ void GameServer::handleIncomingPacket(sf::Packet& packet, RemotePeer& receivingP
 			sf::Int32 aircraftHitpoints;
 			//sf::Int32 missileAmmo;
 			sf::Vector2f aircraftPosition;
-			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y >> aircraftHitpoints;
+			sf::Int32 aircraftRotation;
+			packet >> aircraftIdentifier >> aircraftPosition.x >> aircraftPosition.y >> aircraftHitpoints >> aircraftRotation;
 			mAircraftInfo[aircraftIdentifier].position = aircraftPosition;
 			mAircraftInfo[aircraftIdentifier].hitpoints = aircraftHitpoints;
+			mAircraftInfo[aircraftIdentifier].rotation = aircraftRotation;
 			//mAircraftInfo[aircraftIdentifier].missileAmmo = missileAmmo;
 		}
 	} break;
@@ -362,7 +364,7 @@ void GameServer::updateClientState()
 	updateClientStatePacket << static_cast<sf::Int32>(mAircraftInfo.size());
 
 	for(auto aircraft : mAircraftInfo)
-		updateClientStatePacket << aircraft.first << aircraft.second.position.x << aircraft.second.position.y;
+		updateClientStatePacket << aircraft.first << aircraft.second.position.x << aircraft.second.position.y << aircraft.second.rotation;
 
 	sendToAll(updateClientStatePacket);
 }
@@ -375,7 +377,7 @@ void GameServer::handleIncomingConnections()
 	if (mListenerSocket.accept(mPeers[mConnectedPlayers]->socket) == sf::TcpListener::Done)
 	{
 		// order the new client to spawn its own plane ( player 1 )
-		mAircraftInfo[mAircraftIdentifierCounter].position = sf::Vector2f(mBattleFieldRect.width / 2, mBattleFieldRect.top + mBattleFieldRect.height / 2);
+		mAircraftInfo[mAircraftIdentifierCounter].position = sf::Vector2f(mBattleFieldRect.left + mBattleFieldRect.width / 2, mBattleFieldRect.top + mBattleFieldRect.height / 2);
 		mAircraftInfo[mAircraftIdentifierCounter].hitpoints = 100;
 		//mAircraftInfo[mAircraftIdentifierCounter].missileAmmo = 2;
 
@@ -387,7 +389,7 @@ void GameServer::handleIncomingConnections()
 
 		mPeers[mConnectedPlayers]->aircraftIdentifiers.push_back(mAircraftIdentifierCounter);
 
-		broadcastMessage("New player!");
+		broadcastMessage("New Enemy!");
 		informWorldState(mPeers[mConnectedPlayers]->socket);
 		notifyPlayerSpawn(mAircraftIdentifierCounter++);
 
@@ -430,7 +432,7 @@ void GameServer::handleDisconnections()
 				setListening(true);
 			}
 
-			broadcastMessage("An ally has disconnected.");
+			broadcastMessage("A player has disconnected.");
 		}
 		else
 		{

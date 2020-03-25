@@ -148,7 +148,7 @@ void World::createPickup(sf::Vector2f position, PickupID type)
 {
 	std::unique_ptr<Pickup> pickup(new Pickup(type, mTextures));
 	pickup->setPosition(position);
-	pickup->setVelocity(0.f, 1.f);
+	pickup->setVelocity(-1.f, 0.f);
 	mSceneLayers[static_cast<int>(LayerID::UpperAir)]->attachChild(std::move(pickup));
 }
 
@@ -249,7 +249,7 @@ void World::handleCollisions()
 
 	for (SceneNode::Pair pair : collisionPairs)
 	{
-		if (matchesCategories(pair, CategoryID::PlayerAircraft, CategoryID::EnemyAircraft))
+		if (matchesCategories(pair, CategoryID::PlayerAircraft, CategoryID::PlayerAircraft))
 		{
 			auto& player = static_cast<Aircraft&>(*pair.first);
 			auto& enemy = static_cast<Aircraft&>(*pair.second);
