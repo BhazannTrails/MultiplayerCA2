@@ -17,9 +17,9 @@ GameServer::GameServer(sf::Vector2f battlefieldSize)
 	: mThread(&GameServer::executionThread, this)
 	, mListeningState(false)
 	, mClientTimeoutTime(sf::seconds(3.f))
-	, mMaxConnectedPlayers(10)
+	, mMaxConnectedPlayers(14)
 	, mConnectedPlayers(0)
-	, mWorldHeight(5000.f)
+	, mWorldHeight(768.f)
 	, mBattleFieldRect(0.f, mWorldHeight - battlefieldSize.y, battlefieldSize.x, battlefieldSize.y)
 	, mBattleFieldScrollSpeed(-50.f)
 	, mAircraftCount(0)
@@ -126,7 +126,7 @@ void GameServer::executionThread()
 		// Fixed update step
 		while (stepTime >= stepInterval)
 		{
-			mBattleFieldRect.top += mBattleFieldScrollSpeed * stepInterval.asSeconds();
+			//mBattleFieldRect.top += mBattleFieldScrollSpeed * stepInterval.asSeconds();
 			stepTime -= stepInterval;
 		}
 
@@ -278,37 +278,37 @@ void GameServer::handleIncomingPacket(sf::Packet& packet, RemotePeer& receivingP
 		notifyPlayerRealtimeChange(aircraftIdentifier, action, actionEnabled);
 	} break;
 
-	case static_cast<int>(Client::PacketType::RequestCoopPartner):
-	{
-		receivingPeer.aircraftIdentifiers.push_back(mAircraftIdentifierCounter);
-		mAircraftInfo[mAircraftIdentifierCounter].position = sf::Vector2f(mBattleFieldRect.width / 2, mBattleFieldRect.top + mBattleFieldRect.height / 2);
-		mAircraftInfo[mAircraftIdentifierCounter].hitpoints = 100;
-		mAircraftInfo[mAircraftIdentifierCounter].missileAmmo = 2;
+	//case static_cast<int>(Client::PacketType::RequestCoopPartner):
+	//{
+	//	receivingPeer.aircraftIdentifiers.push_back(mAircraftIdentifierCounter);
+	//	mAircraftInfo[mAircraftIdentifierCounter].position = sf::Vector2f(mBattleFieldRect.width / 2, mBattleFieldRect.top + mBattleFieldRect.height / 2);
+	//	mAircraftInfo[mAircraftIdentifierCounter].hitpoints = 100;
+	//	mAircraftInfo[mAircraftIdentifierCounter].missileAmmo = 2;
 
-		sf::Packet requestPacket;
-		requestPacket << static_cast<sf::Int32>(Server::PacketType::AcceptCoopPartner);
-		requestPacket << mAircraftIdentifierCounter;
-		requestPacket << mAircraftInfo[mAircraftIdentifierCounter].position.x;
-		requestPacket << mAircraftInfo[mAircraftIdentifierCounter].position.y;
+	//	sf::Packet requestPacket;
+	//	requestPacket << static_cast<sf::Int32>(Server::PacketType::AcceptCoopPartner);
+	//	requestPacket << mAircraftIdentifierCounter;
+	//	requestPacket << mAircraftInfo[mAircraftIdentifierCounter].position.x;
+	//	requestPacket << mAircraftInfo[mAircraftIdentifierCounter].position.y;
 
-		receivingPeer.socket.send(requestPacket);
-		mAircraftCount++;
+	//	receivingPeer.socket.send(requestPacket);
+	//	mAircraftCount++;
 
-		// Inform every other peer about this new plane
-		for(PeerPtr & peer : mPeers)
-		{
-			if (peer.get() != &receivingPeer && peer->ready)
-			{
-				sf::Packet notifyPacket;
-				notifyPacket << static_cast<sf::Int32>(Server::PacketType::PlayerConnect);
-				notifyPacket << mAircraftIdentifierCounter;
-				notifyPacket << mAircraftInfo[mAircraftIdentifierCounter].position.x;
-				notifyPacket << mAircraftInfo[mAircraftIdentifierCounter].position.y;
-				peer->socket.send(notifyPacket);
-			}
-		}
-		mAircraftIdentifierCounter++;
-	} break;
+	//	// Inform every other peer about this new plane
+	//	for(PeerPtr & peer : mPeers)
+	//	{
+	//		if (peer.get() != &receivingPeer && peer->ready)
+	//		{
+	//			sf::Packet notifyPacket;
+	//			notifyPacket << static_cast<sf::Int32>(Server::PacketType::PlayerConnect);
+	//			notifyPacket << mAircraftIdentifierCounter;
+	//			notifyPacket << mAircraftInfo[mAircraftIdentifierCounter].position.x;
+	//			notifyPacket << mAircraftInfo[mAircraftIdentifierCounter].position.y;
+	//			peer->socket.send(notifyPacket);
+	//		}
+	//	}
+	//	mAircraftIdentifierCounter++;
+	//} break;
 
 	case static_cast<int>(Client::PacketType::PositionUpdate):
 	{

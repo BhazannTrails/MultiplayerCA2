@@ -2,7 +2,6 @@
 #include "ParticleID.hpp"
 #include "ParticleNode.hpp"
 #include "NetworkNode.hpp"
-
 #include <SFML/Graphics/RenderWindow.hpp>
 
 
@@ -16,7 +15,7 @@ World::World(sf::RenderTarget& outputTarget, FontHolder& fonts, SoundPlayer& sou
 	, mTextures()
 	, mSceneGraph()
 	, mSceneLayers()
-	, mWorldBounds(0.f, 0.f, 5000.f, mCamera.getSize().x)
+	, mWorldBounds(0.f, 0.f, 5000, mCamera.getSize().y)
 	, mSpawnPosition(mCamera.getSize().x / 2.f, mWorldBounds.height - mCamera.getSize().y / 2.f)
 	, mScrollSpeed(-50.f)
 	, mScrollSpeedCompensation(1.f)
@@ -44,7 +43,7 @@ void World::update(sf::Time dt)
 {
 	// Scroll the world, reset player velocity
 	mCamera.move(-mScrollSpeed * dt.asSeconds()*mScrollSpeedCompensation, 0.f);
-	
+
 	for (Aircraft* a : mPlayerAircraft)
 	{
 		a->setVelocity(0.f, 0.f);
@@ -68,7 +67,7 @@ void World::update(sf::Time dt)
 
 	// Remove all destroyed entities, create new ones
 	mSceneGraph.removeWrecks();
-	spawnEnemies();
+	//spawnEnemies();
 
 	// Regular update step, adapt position (correct if outside view)
 	mSceneGraph.update(dt, mCommandQueue);
@@ -312,7 +311,6 @@ void World::buildScene()
 
 	sf::Texture& texture = mTextures.get(TextureID::Jungle);
 	sf::IntRect textureRect(mWorldBounds);
-	
 	texture.setRepeated(true);
 
 	// Add the background sprite to the scene
@@ -320,11 +318,15 @@ void World::buildScene()
 	backgroundSprite->setPosition(mWorldBounds.left, mWorldBounds.top);
 	mSceneLayers[static_cast<int>(LayerID::Background)]->attachChild(std::move(backgroundSprite));
 
-	//Add the finish line to the scene
-	sf::Texture& finishTexture = mTextures.get(TextureID::FinishLine);
-	std::unique_ptr<SpriteNode> finishSprite(new SpriteNode(finishTexture));
-	finishSprite->setPosition(0.f, -76.f);
-	mSceneLayers[static_cast<int>(LayerID::Background)]->attachChild(std::move(finishSprite));
+	//possibly repeating background indefinitely
+	std::unique_ptr<SpriteNode> backgroundSprite2(new SpriteNode(texture, textureRect));
+	backgroundSprite2->setPosition(mWorldBounds.left, mWorldBounds.top);
+	mSceneLayers[static_cast<int>(LayerID::Background)]->attachChild(std::move(backgroundSprite2));
+	////Add the finish line to the scene
+	//sf::Texture& finishTexture = mTextures.get(TextureID::FinishLine);
+	//std::unique_ptr<SpriteNode> finishSprite(new SpriteNode(finishTexture));
+	//finishSprite->setPosition(0.f, -76.f);
+	//mSceneLayers[static_cast<int>(LayerID::Background)]->attachChild(std::move(finishSprite));
 
 	//Add particle nodes for smoke and propellant
 	std::unique_ptr<ParticleNode> smokeNode(new ParticleNode(ParticleID::Smoke, mTextures));
