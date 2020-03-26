@@ -160,7 +160,7 @@ bool World::pollGameAction(Action& out)
 void World::setCurrentBattleFieldPosition(float lineY)
 {
 	mCamera.setCenter(mCamera.getCenter().x, lineY - mCamera.getSize().y / 2);
-	mSpawnPosition.y = mWorldBounds.height;
+	mSpawnPosition.x = mWorldBounds.width;
 }
 
 void World::setWorldHeight(float height)
