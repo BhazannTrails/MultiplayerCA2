@@ -364,7 +364,7 @@ void GameServer::updateClientState()
 	updateClientStatePacket << static_cast<sf::Int32>(mAircraftInfo.size());
 
 	for(auto aircraft : mAircraftInfo)
-		updateClientStatePacket << aircraft.first << aircraft.second.position.x << aircraft.second.position.y << aircraft.second.rotation;
+		updateClientStatePacket << aircraft.first << aircraft.second.position.x << aircraft.second.position.y << aircraft.second.rotation << aircraft.second.hitpoints;
 
 	sendToAll(updateClientStatePacket);
 }
@@ -386,6 +386,7 @@ void GameServer::handleIncomingConnections()
 		packet << mAircraftIdentifierCounter;
 		packet << mAircraftInfo[mAircraftIdentifierCounter].position.x;
 		packet << mAircraftInfo[mAircraftIdentifierCounter].position.y;
+		packet << mAircraftInfo[mAircraftIdentifierCounter].hitpoints;
 
 		mPeers[mConnectedPlayers]->aircraftIdentifiers.push_back(mAircraftIdentifierCounter);
 
@@ -446,7 +447,7 @@ void GameServer::informWorldState(sf::TcpSocket& socket)
 {
 	sf::Packet packet;
 	packet << static_cast<sf::Int32>(Server::PacketType::InitialState);
-	packet << mWorldHeight << mBattleFieldRect.top + mBattleFieldRect.height;
+	packet << mWorldHeight << mBattleFieldRect.left + mBattleFieldRect.width;
 	packet << static_cast<sf::Int32>(mAircraftCount);
 
 	for (std::size_t i = 0; i < mConnectedPlayers; ++i)

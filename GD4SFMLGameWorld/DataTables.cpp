@@ -80,9 +80,9 @@ std::vector<PickupData> initializePickupData()
 	data[static_cast<int>(PickupID::HealthRefill)].textureRect = sf::IntRect(0, 64, 40, 40);
 	data[static_cast<int>(PickupID::HealthRefill)].action = [](Aircraft& a) {a.repair(25); };
 
-	data[static_cast<int>(PickupID::MissileRefill)].texture = TextureID::Entities;
+	/*data[static_cast<int>(PickupID::MissileRefill)].texture = TextureID::Entities;
 	data[static_cast<int>(PickupID::MissileRefill)].textureRect = sf::IntRect(40, 64, 40, 40);
-	data[static_cast<int>(PickupID::MissileRefill)].action = std::bind(&Aircraft::collectMissiles, std::placeholders::_1, 3);
+	data[static_cast<int>(PickupID::MissileRefill)].action = std::bind(&Aircraft::collectMissiles, std::placeholders::_1, 3);*/
 
 	data[static_cast<int>(PickupID::FireSpread)].texture = TextureID::Entities;
 	data[static_cast<int>(PickupID::FireSpread)].textureRect = sf::IntRect(80, 64, 40, 40);

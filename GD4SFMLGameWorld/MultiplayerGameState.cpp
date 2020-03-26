@@ -55,6 +55,12 @@ MultiplayerGameState::MultiplayerGameState(StateStack& stack, Context context, b
 	centreOrigin(mFailedConnectionText);
 	mFailedConnectionText.setPosition(mWindow.getSize().x / 2.f, mWindow.getSize().y / 2.f);
 
+	mNumberOfPlayersText.setFont(context.fonts->get(FontID::Main));
+	
+	mNumberOfPlayersText.setCharacterSize(20);
+	mNumberOfPlayersText.setFillColor(sf::Color::White);
+	mNumberOfPlayersText.setPosition(mWindow.getSize().x / 2.f - 100.f, 50.f);
+
 	// Render a "establishing connection" frame for user feedback
 	mWindow.clear(sf::Color::Black);
 	mWindow.draw(mFailedConnectionText);
@@ -92,6 +98,7 @@ void MultiplayerGameState::draw()
 
 		// Broadcast messages in default view
 		mWindow.setView(mWindow.getDefaultView());
+		mWindow.draw(mNumberOfPlayersText);
 
 		if (!mBroadcasts.empty())
 			mWindow.draw(mBroadcastText);
@@ -239,7 +246,7 @@ bool MultiplayerGameState::update(sf::Time dt)
 		requestStackClear();
 		requestStackPush(StateID::Menu);
 	}
-
+	mNumberOfPlayersText.setString("Players left alive: " + toString(mPlayers.size()));
 	return true;
 }
 

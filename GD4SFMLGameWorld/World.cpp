@@ -17,7 +17,7 @@ World::World(sf::RenderTarget& outputTarget, FontHolder& fonts, SoundPlayer& sou
 	, mSceneLayers()
 	, mWorldBounds(0.f, 0.f, 5000, mCamera.getSize().y)
 	, mSpawnPosition(mCamera.getSize().x / 2.f, mWorldBounds.height - mCamera.getSize().y / 2.f)
-	, mScrollSpeed(-50.f)
+	, mScrollSpeed(0.f)
 	, mScrollSpeedCompensation(1.f)
 	, mPlayerAircraft()
 	, mEnemySpawnPoints()
@@ -157,9 +157,9 @@ bool World::pollGameAction(Action& out)
 	return mNetworkNode->pollGameAction(out);
 }
 
-void World::setCurrentBattleFieldPosition(float lineY)
+void World::setCurrentBattleFieldPosition(float lineX)
 {
-	mCamera.setCenter(mCamera.getCenter().x, lineY - mCamera.getSize().y / 2);
+	mCamera.setCenter(mCamera.getCenter().x, mCamera.getSize().y / 2);
 	mSpawnPosition.x = mWorldBounds.width;
 }
 
