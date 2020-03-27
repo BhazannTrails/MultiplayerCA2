@@ -41,12 +41,12 @@ MultiplayerGameState::MultiplayerGameState(StateStack& stack, Context context, b
 	mBroadcastText.setFont(context.fonts->get(FontID::Main));
 	mBroadcastText.setPosition(1024.f / 2, 100.f);
 
-	mPlayerInvitationText.setFont(context.fonts->get(FontID::Main));
+	/*mPlayerInvitationText.setFont(context.fonts->get(FontID::Main));
 	mPlayerInvitationText.setCharacterSize(20);
 	mPlayerInvitationText.setFillColor(sf::Color::White);
 	mPlayerInvitationText.setString("Press Enter to spawn player 2");
 	mPlayerInvitationText.setPosition(1000 - mPlayerInvitationText.getLocalBounds().width, 760 - mPlayerInvitationText.getLocalBounds().height);
-
+*/
 	// We reuse this text for "Attempt to connect" and "Failed to connect" messages
 	mFailedConnectionText.setFont(context.fonts->get(FontID::Main));
 	mFailedConnectionText.setString("Attempting to connect...");
@@ -408,8 +408,8 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 		}
 	} break;
 
-	//
-	/*case static_cast<int>(Server::PacketType::AcceptCoopPartner):
+	
+	case static_cast<int>(Server::PacketType::AcceptCoopPartner):
 	{
 		sf::Int32 aircraftIdentifier;
 		packet >> aircraftIdentifier;
@@ -417,7 +417,7 @@ void MultiplayerGameState::handlePacket(sf::Int32 packetType, sf::Packet& packet
 		mWorld.addAdditionalAircraft(aircraftIdentifier);
 		mPlayers[aircraftIdentifier].reset(new Player(&mSocket, aircraftIdentifier, getContext().keys2));
 		mLocalPlayerIdentifiers.push_back(aircraftIdentifier);
-	} break;*/
+	} break;
 
 	// Player event (like missile fired) occurs
 	case static_cast<int>(Server::PacketType::PlayerEvent):

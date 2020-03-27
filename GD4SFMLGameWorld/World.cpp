@@ -259,7 +259,7 @@ void World::handleCollisions()
 			enemy.destroy();
 		}
 
-		if (matchesCategories(pair, CategoryID::Player2Aircraft, CategoryID::PlayerAircraft)) {
+		if (matchesCategories(pair, CategoryID::PlayerAircraft, CategoryID::Player2Aircraft)) {
 
 			auto& player = static_cast<Aircraft&>(*pair.first);
 			auto& enemy = static_cast<Aircraft&>(*pair.second);
@@ -281,7 +281,7 @@ void World::handleCollisions()
 			pickup.destroy();
 		}
 
-		else if (matchesCategories(pair, CategoryID::EnemyAircraft, CategoryID::AlliedProjectile)
+		else if (matchesCategories(pair, CategoryID::Player2Aircraft, CategoryID::AlliedProjectile)
 			|| matchesCategories(pair, CategoryID::PlayerAircraft, CategoryID::EnemyProjectile))
 		{
 			auto& aircraft = static_cast<Aircraft&>(*pair.first);

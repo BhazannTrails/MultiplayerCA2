@@ -89,7 +89,7 @@ Aircraft::Aircraft(AircraftID type, const TextureHolder& textures, const FontHol
 	mHealthDisplay = healthDisplay.get();
 	attachChild(std::move(healthDisplay));
 
-	if (getCategory() == (static_cast<int>(CategoryID::PlayerAircraft)))
+	if (getCategory() == (static_cast<int>(CategoryID::PlayerAircraft)) || static_cast<int>(CategoryID::Player2Aircraft))
 	{
 		std::unique_ptr<TextNode> missileDisplay(new TextNode(fonts, ""));
 		missileDisplay->setPosition(0, 70);
@@ -161,6 +161,7 @@ unsigned int Aircraft::getCategory() const
 	if (isAllied())
 		return static_cast<int>(CategoryID::PlayerAircraft);
 	else
+		return static_cast<int>(CategoryID::Player2Aircraft);
 		return static_cast<int>(CategoryID::EnemyAircraft);
 }
 
