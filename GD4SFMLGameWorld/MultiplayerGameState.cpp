@@ -247,6 +247,9 @@ bool MultiplayerGameState::update(sf::Time dt)
 		requestStackPush(StateID::Menu);
 	}
 	mNumberOfPlayersText.setString("Players left alive: " + toString(mPlayers.size()));
+	if (mPlayers.size() == 2) {
+		mNumberOfPlayersText.setString("Final two!");
+	}
 	return true;
 }
 
