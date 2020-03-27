@@ -30,6 +30,8 @@ bool GameState::update(sf::Time dt)
 		requestStackPush(StateID::GameOver);
 	}
 
+	
+
 	CommandQueue& commands = mWorld.getCommandQueue();
 	mPlayer.handleRealtimeInput(commands);
 
